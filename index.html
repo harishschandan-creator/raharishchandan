@@ -14,6 +14,7 @@
             --text-muted: #64748b;
             --bg-light: #f8fafc;
             --border: #e2e8f0;
+            --whatsapp: #25D366;
             --warning-bg: #fffbeb;
             --warning-border: #fef3c7;
             --warning-text: #b45309;
@@ -30,6 +31,11 @@
             color: var(--text-main);
             background-color: #ffffff;
             line-height: 1.6;
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: underline;
         }
 
         /* Highly Visible Top Credibility & Regulatory Bar */
@@ -163,56 +169,129 @@
 
         /* Hero Section */
         .hero {
-            padding: 48px 0 36px 0;
-            max-width: 850px;
+            padding: 40px;
+            background-color: var(--bg-light);
+            border-radius: 8px;
+            border-left: 5px solid var(--accent);
+            margin: 20px 0;
         }
 
         .hero h1 {
-            font-size: 2.25rem;
+            font-size: 2.1rem;
             line-height: 1.25;
             color: var(--primary);
-            margin-bottom: 16px;
+            margin-bottom: 14px;
             font-weight: 800;
         }
 
         .hero p {
-            font-size: 1.15rem;
+            font-size: 1.1rem;
             color: var(--text-muted);
             line-height: 1.6;
-            margin-bottom: 24px;
         }
 
-        .cta-buttons {
-            display: flex;
-            gap: 12px;
-            flex-wrap: wrap;
+        /* Services Grid Section */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+            margin-top: 24px;
         }
 
-        .btn {
-            display: inline-block;
-            padding: 12px 24px;
-            border-radius: 6px;
-            font-weight: 600;
-            text-decoration: none;
-            font-size: 0.95rem;
-        }
-
-        .btn-primary {
-            background-color: var(--accent);
-            color: white;
-        }
-
-        .btn-primary:hover {
-            background-color: #1d4ed8;
-        }
-
-        .btn-secondary {
-            background-color: var(--accent-light);
-            color: var(--accent);
+        .service-card {
+            background: #ffffff;
             border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 24px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            border-top: 4px solid var(--accent);
         }
 
-        /* Sections */
+        .service-card h3 {
+            margin-top: 0;
+            color: var(--primary);
+            font-size: 1.15rem;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 12px;
+            margin-bottom: 16px;
+        }
+
+        .service-card ul {
+            padding-left: 0;
+            list-style: none;
+            margin-bottom: 0;
+        }
+
+        .service-card li {
+            margin-bottom: 10px;
+        }
+
+        .service-link {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: var(--bg-light);
+            padding: 10px 14px;
+            border-radius: 6px;
+            border: 1px solid var(--border);
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.92rem;
+            transition: all 0.2s ease;
+        }
+
+        .service-link:hover {
+            border-color: var(--whatsapp);
+            background: #f0fdf4;
+            color: #15803d;
+        }
+
+        .service-link span.wa-badge {
+            font-size: 0.75rem;
+            background-color: var(--whatsapp);
+            color: white;
+            padding: 3px 8px;
+            border-radius: 12px;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        .fo-risk-box {
+            background-color: #fef2f2;
+            border-left: 4px solid #ef4444;
+            padding: 16px 20px;
+            margin: 24px 0 0 0;
+            border-radius: 6px;
+            font-size: 0.88rem;
+            color: #991b1b;
+        }
+
+        /* Generic Cards & Tables */
+        .card {
+            background: #ffffff;
+            border: 1px solid var(--border);
+            padding: 24px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        .card h3 {
+            font-size: 1.1rem;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .statutory-card {
+            background-color: var(--bg-light);
+            border-left: 4px solid var(--accent);
+            padding: 16px 20px;
+            border-radius: 0 6px 6px 0;
+            margin: 24px 0;
+            font-size: 0.9rem;
+            color: var(--text-main);
+        }
+
         .section-block {
             padding: 40px 0;
             border-top: 1px solid var(--border);
@@ -221,47 +300,10 @@
         .section-title {
             font-size: 1.5rem;
             color: var(--primary);
-            margin-bottom: 20px;
+            margin-bottom: 16px;
             font-weight: 700;
         }
 
-        /* Grid Cards */
-        .grid-3 {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-        }
-
-        .card {
-            background: #ffffff;
-            border: 1px solid var(--border);
-            padding: 24px;
-            border-radius: 8px;
-        }
-
-        .card h3 {
-            font-size: 1.1rem;
-            color: var(--primary);
-            margin-bottom: 8px;
-        }
-
-        .card p {
-            font-size: 0.95rem;
-            color: var(--text-muted);
-        }
-
-        /* Statutory Box */
-        .statutory-card {
-            background-color: var(--bg-light);
-            border-left: 4px solid var(--accent);
-            padding: 16px 20px;
-            border-radius: 0 6px 6px 0;
-            margin: 20px 0;
-            font-size: 0.9rem;
-            color: var(--text-main);
-        }
-
-        /* Table */
         table {
             width: 100%;
             border-collapse: collapse;
@@ -279,6 +321,37 @@
             background-color: var(--bg-light);
             color: var(--primary);
             font-weight: 600;
+        }
+
+        /* Floating WhatsApp Button */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 30px;
+            right: 30px;
+            background-color: var(--whatsapp);
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 8px rgba(0,0,0,0.25);
+            z-index: 10000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: transform 0.2s ease;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.08);
+        }
+
+        .whatsapp-float svg {
+            width: 35px;
+            height: 35px;
+            fill: white;
         }
 
         /* Footer */
@@ -326,7 +399,7 @@
     <div class="credibility-bar">
         <div class="credibility-container">
             <div class="credibility-items">
-                <span class="cred-badge">Analyst: <strong>S Harish Chandan</strong></span>
+                <span class="cred-badge">Analyst & Compliance Officer: <strong>S Harish Chandan</strong></span>
                 <span class="cred-badge">SEBI Reg: <strong>INH000012768</strong></span>
                 <span class="cred-badge">RAASB No: <strong>5826</strong></span>
             </div>
@@ -347,10 +420,11 @@
             </a>
             <nav>
                 <a href="#about">About</a>
-                <a href="#research">Research</a>
+                <a href="#services">Services</a>
                 <a href="#disclosures">Disclosures</a>
                 <a href="#complaints">Complaints</a>
-                <a href="#contact">Contact</a>
+                <a href="#charter">Investor Charter</a>
+                <a href="#terms">Terms & Refunds</a>
             </nav>
         </div>
     </header>
@@ -367,41 +441,145 @@
             <p>
                 We deliver clear, reliable, multiple-signal analysis that you can actually act on. By tracking key institutional drivers across Indian equities, index derivatives, and macro shifts, our research helps you stay ahead of market turns with strict risk management and zero fluff.
             </p>
-            <div class="cta-buttons">
-                <a href="#research" class="btn btn-primary">Explore Research Focus</a>
-                <a href="#contact" class="btn btn-secondary">Get in Touch</a>
-            </div>
         </section>
 
         <!-- Statutory Disclaimer -->
         <div class="statutory-card">
-            <strong>Statutory Disclaimer:</strong> Registration granted by SEBI and certification from NISM in no way guarantee performance of the intermediary or provide any assurance of returns to investors.
+            <strong>Statutory Disclaimer:</strong> Registration granted by SEBI, membership of RAASB and certification from NISM in no way guarantee performance of the intermediary or provide any assurance of returns to investors. Read all related documents carefully before investing.
         </div>
 
-        <!-- Core Research Offerings -->
-        <section id="research" class="section-block">
-            <h2 class="section-title">Independent Research Focus</h2>
-            <div class="grid-3">
-                <div class="card">
-                    <h3>Equity & Sectoral Analysis</h3>
-                    <p>Rigorous, data-driven equity coverage focusing on fundamentals, technical setups, and key market drivers across Nifty 50 and sectoral indices.</p>
+        <!-- Services Section with Direct WhatsApp Links -->
+        <section id="services" class="section-block">
+            <h2 class="section-title">Services Offered</h2>
+            <p style="margin-bottom: 20px; color: var(--text-muted); font-size: 0.95rem;">Click on any service below to inquire directly via WhatsApp regarding Pricing, Periodicity, and Delivery Methods.</p>
+            
+            <div class="services-grid">
+                
+                <!-- Category 1: Research Reports Card -->
+                <div class="service-card">
+                    <h3>1. Research Reports</h3>
+                    <ul>
+                        <li>
+                            <a href="https://wa.me/918894466882?text=Hi,%0A%0AI%20am%20interested%20in%20availing%20NIFTY%20Index%20Research%20Reports%20and%20would%20want%20to%20get%20details%20on%20Price,%20Periodicity%20%26%20Methods%20of%20delivery." class="service-link" target="_blank" rel="noopener">
+                                NIFTY Index
+                                <span class="wa-badge">Inquire</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://wa.me/918894466882?text=Hi,%0A%0AI%20am%20interested%20in%20availing%20BANKNIFTY%20Index%20Research%20Reports%20and%20would%20want%20to%20get%20details%20on%20Price,%20Periodicity%20%26%20Methods%20of%20delivery." class="service-link" target="_blank" rel="noopener">
+                                BANKNIFTY Index
+                                <span class="wa-badge">Inquire</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://wa.me/918894466882?text=Hi,%0A%0AI%20am%20interested%20in%20availing%20NIFTY%2050%20Equities%20Research%20Reports%20and%20would%20want%20to%20get%20details%20on%20Price,%20Periodicity%20%26%20Methods%20of%20delivery." class="service-link" target="_blank" rel="noopener">
+                                NIFTY 50 Equities
+                                <span class="wa-badge">Inquire</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://wa.me/918894466882?text=Hi,%0A%0AI%20am%20interested%20in%20availing%20NIFTY%20Midcap%20Research%20Reports%20and%20would%20want%20to%20get%20details%20on%20Price,%20Periodicity%20%26%20Methods%20of%20delivery." class="service-link" target="_blank" rel="noopener">
+                                NIFTY Midcap
+                                <span class="wa-badge">Inquire</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://wa.me/918894466882?text=Hi,%0A%0AI%20am%20interested%20in%20availing%20NIFTY%20Smallcap%20Research%20Reports%20and%20would%20want%20to%20get%20details%20on%20Price,%20Periodicity%20%26%20Methods%20of%20delivery." class="service-link" target="_blank" rel="noopener">
+                                NIFTY Smallcap
+                                <span class="wa-badge">Inquire</span>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
-                <div class="card">
-                    <h3>Derivatives & Market Structure</h3>
-                    <p>In-depth analysis of Open Interest (OI), Put-Call Ratios (PCR), and volatility patterns to map key support and resistance zones.</p>
+
+                <!-- Category 2: Recommendations / Calls Card -->
+                <div class="service-card">
+                    <h3>2. Recommendations / Calls</h3>
+                    <ul>
+                        <li>
+                            <a href="https://wa.me/918894466882?text=Hi,%0A%0AI%20am%20interested%20in%20availing%20Index%20Options%20(BANKNIFTY%20%2B%20NIFTY)%20Intraday%20Recommendations%20and%20would%20want%20to%20get%20details%20on%20Price,%20Periodicity%20%26%20Methods%20of%20delivery." class="service-link" target="_blank" rel="noopener">
+                                Index Options (BANKNIFTY + NIFTY) Intraday
+                                <span class="wa-badge">Inquire</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://wa.me/918894466882?text=Hi,%0A%0AI%20am%20interested%20in%20availing%20Index%20Options%20(BANKNIFTY%20%2B%20NIFTY)%20Short%20Term%20Recommendations%20and%20would%20want%20to%20get%20details%20on%20Price,%20Periodicity%20%26%20Methods%20of%20delivery." class="service-link" target="_blank" rel="noopener">
+                                Index Options (BANKNIFTY + NIFTY) Short Term
+                                <span class="wa-badge">Inquire</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://wa.me/918894466882?text=Hi,%0A%0AI%20am%20interested%20in%20availing%20Equity%20Options%20(Short%20Term)%20Recommendations%20and%20would%20want%20to%20get%20details%20on%20Price,%20Periodicity%20%26%20Methods%20of%20delivery." class="service-link" target="_blank" rel="noopener">
+                                Equity Options (Short Term)
+                                <span class="wa-badge">Inquire</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://wa.me/918894466882?text=Hi,%0A%0AI%20am%20interested%20in%20availing%20Expiry%20Day%20Intraday%20Calls%20and%20would%20want%20to%20get%20details%20on%20Price,%20Periodicity%20%26%20Methods%20of%20delivery." class="service-link" target="_blank" rel="noopener">
+                                Expiry Day Intraday Calls
+                                <span class="wa-badge">Inquire</span>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
-                <div class="card">
-                    <h3>Macroeconomic Trends</h3>
-                    <p>Actionable commentary on interest rates, trade policy shifts, and global commodity movements impacting Indian capital markets.</p>
+
+                <!-- Category 3: Learning Card -->
+                <div class="service-card">
+                    <h3>3. Learning (Individuals & Organizations)</h3>
+                    <ul>
+                        <li>
+                            <a href="https://wa.me/918894466882?text=Hi,%0A%0AI%20am%20interested%20in%20availing%20Comprehensive%20Mentorship%20Program%20and%20would%20want%20to%20get%20details%20on%20Price,%20Periodicity%20%26%20Methods%20of%20delivery." class="service-link" style="border-left: 3px solid var(--primary);" target="_blank" rel="noopener">
+                                <strong>Comprehensive Mentorship Program</strong>
+                                <span class="wa-badge">Inquire</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://wa.me/918894466882?text=Hi,%0A%0AI%20am%20interested%20in%20availing%20Stock%20Market%20Basics%20Learning%20and%20would%20want%20to%20get%20details%20on%20Price,%20Periodicity%20%26%20Methods%20of%20delivery." class="service-link" target="_blank" rel="noopener">
+                                Stock Market Basics
+                                <span class="wa-badge">Inquire</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://wa.me/918894466882?text=Hi,%0A%0AI%20am%20interested%20in%20availing%20Managing%20Personal%20Finance%20Learning%20and%20would%20want%20to%20get%20details%20on%20Price,%20Periodicity%20%26%20Methods%20of%20delivery." class="service-link" target="_blank" rel="noopener">
+                                Managing Personal Finance
+                                <span class="wa-badge">Inquire</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://wa.me/918894466882?text=Hi,%0A%0AI%20am%20interested%20in%20availing%20Fundamental%20Analysis%20(Basics,%20Advanced%20%26%20Expert%20Levels)%20and%20would%20want%20to%20get%20details%20on%20Price,%20Periodicity%20%26%20Methods%20of%20delivery." class="service-link" target="_blank" rel="noopener">
+                                Fundamental Analysis (All Levels)
+                                <span class="wa-badge">Inquire</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://wa.me/918894466882?text=Hi,%0A%0AI%20am%20interested%20in%20availing%20Technical%20Analysis%20(Basics,%20Advanced%20%26%20Expert%20Levels)%20and%20would%20want%20to%20get%20details%20on%20Price,%20Periodicity%20%26%20Methods%20of%20delivery." class="service-link" target="_blank" rel="noopener">
+                                Technical Analysis (All Levels)
+                                <span class="wa-badge">Inquire</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://wa.me/918894466882?text=Hi,%0A%0AI%20am%20interested%20in%20availing%20Money%20Management%20%26%20Monetary%20Risk%20Management%20and%20would%20want%20to%20get%20details%20on%20Price,%20Periodicity%20%26%20Methods%20of%20delivery." class="service-link" target="_blank" rel="noopener">
+                                Money & Risk Management
+                                <span class="wa-badge">Inquire</span>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
+
+            </div>
+
+            <!-- Mandatory SEBI Risk Disclosure on Derivatives -->
+            <div class="fo-risk-box">
+                <strong>Mandatory SEBI Risk Disclosure on Derivatives (F&O):</strong><br>
+                <em>"9 out of 10 individual traders in equity Futures and Options Segment incurred net losses. On average, loss makers registered net trading loss close to ₹50,000. Over and above net trading losses incurred, loss makers expended an additional 28% as transaction costs. Those making net trading profits incurred between 15% to 50% of such profits as transaction costs." (Source: SEBI Study on Individual F&O Traders)</em>
             </div>
         </section>
 
         <!-- Regulatory & Complaints Section -->
         <section id="complaints" class="section-block">
-            <h2 class="section-title">Investor Complaints & Transparency</h2>
+            <h2 class="section-title">Investor Complaints & Grievance Redressal</h2>
             <p style="margin-bottom: 12px; color: var(--text-muted); font-size: 0.95rem;">
-                In compliance with SEBI circulars, the summary of complaints received is updated on a monthly basis.
+                Data for the month ending: <strong>July 2026</strong>
             </p>
             <table>
                 <thead>
@@ -441,6 +619,49 @@
                     </tr>
                 </tbody>
             </table>
+
+            <div class="card">
+                <h3>Escalation Matrix for Investor Complaints</h3>
+                <p><strong>Designated Compliance & Grievance Officer:</strong> S Harish Chandan</p>
+                <p>If you have grievances regarding research reports or services, please contact us at <a href="mailto:support@raharishchandan.com">support@raharishchandan.com</a> or call <a href="tel:+918894466882">+91 88944 66882</a>. We aim to acknowledge and resolve issues within 7 working days.</p>
+                <p style="margin-top: 10px;">If your complaint is not resolved satisfactorily, you may file a complaint with SEBI via the official portals below:</p>
+                <ul style="padding-left: 20px; margin-top: 6px;">
+                    <li><strong>SEBI SCORES Portal:</strong> <a href="https://scores.sebi.gov.in" target="_blank" rel="noopener">scores.sebi.gov.in</a></li>
+                    <li><strong>SMART Online Dispute Resolution (ODR):</strong> <a href="https://smartodr.in" target="_blank" rel="noopener">smartodr.in</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Investor Charter -->
+        <section id="charter" class="section-block">
+            <h2 class="section-title">Investor Charter for Research Analysts</h2>
+            <div class="card">
+                <h3>Rights and Responsibilities of Investors</h3>
+                <ul style="padding-left: 20px;">
+                    <li><strong>Get Unbiased Research:</strong> Access objective, transparent, and regulatory-compliant research reports.</li>
+                    <li><strong>Know the Analyst:</strong> Verify valid SEBI registration credentials before relying on research reports.</li>
+                    <li><strong>Do Not Expect Guaranteed Returns:</strong> Never engage with individuals promising fixed, assured, or risk-free market returns.</li>
+                    <li><strong>Independent Decisions:</strong> Evaluate market risks carefully as investment decisions rest solely with the individual investor.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Terms of Service & Refund Policy -->
+        <section id="terms" class="section-block">
+            <h2 class="section-title">Terms of Service & Refund Policy</h2>
+            <div class="card">
+                <h3>1. Strict No-Refund Policy</h3>
+                <p>All fee payments for research subscriptions, access to research reports, educational modules, or analytical services are <strong>final and strictly non-refundable</strong>. No full or partial refunds, cancellations, or transfers will be issued under any circumstances once access to research materials has been provided.</p>
+
+                <h3 style="margin-top: 15px;">2. No Direct Execution or Portfolio Management</h3>
+                <p>S Harish Chandan provides research reports, recommendations, and educational content strictly for informational purposes. We do not provide discretionary portfolio management, handle client funds, or execute trades on behalf of clients.</p>
+
+                <h3 style="margin-top: 15px;">3. No Profit-Sharing or Return Guarantees</h3>
+                <p>In adherence to SEBI regulations, we strictly operate on a fixed fee or subscription basis. We do not engage in profit-sharing arrangements, performance fee sharing, or assurance of capital preservation.</p>
+
+                <h3 style="margin-top: 15px;">4. Intellectual Property Notice</h3>
+                <p>All research notes, charts, technical indicators, and educational materials on this site are the intellectual property of S Harish Chandan. Redistribution, copying, or forwarding of reports without express written consent is prohibited.</p>
+            </div>
         </section>
 
         <!-- Disclosures & Compliance -->
@@ -456,25 +677,14 @@
             </ul>
         </section>
 
-        <!-- Contact Section -->
-        <section id="contact" class="section-block">
-            <h2 class="section-title">Contact Information</h2>
-            <div class="grid-3">
-                <div class="card">
-                    <h3>Registered Address</h3>
-                    <p>G01, No. 787, Parvathi Enclave, 1st Cross, 3rd Main, 5th Stage, BEML Layout, Rajarajeshwari Nagar, Bangalore, Karnataka - 560098</p>
-                </div>
-                <div class="card">
-                    <h3>Communication</h3>
-                    <p><strong>Email:</strong> support@raharishchandan.com<br><strong>Phone:</strong> +91 88944 66882 / +91 96868 77511</p>
-                </div>
-                <div class="card">
-                    <h3>Intermediary Details</h3>
-                    <p><strong>SEBI Reg:</strong> INH000012768<br><strong>RAASB No:</strong> 5826<br><strong>Official UPI:</strong> harish.ra@validhdfc</p>
-                </div>
-            </div>
-        </section>
     </div>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/918894466882?text=Hello%20RA%20S%20Harish%20Chandan,%20I%20have%20an%20inquiry%20regarding%20your%20services." class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contact on WhatsApp">
+        <svg viewBox="0 0 32 32">
+            <path d="M16 2a13 13 0 0 0-11 20l-2 6 6-2a13 13 0 1 0 7-24zm0 24a11 11 0 0 1-5.6-1.5l-.4-.2-4.2 1.1 1.1-4.1-.3-.4A11 11 0 1 1 16 26zm6-8c-.3-.2-1.9-1-2.2-1.1s-.5-.2-.7.2-.8 1.1-1 1.3-.4.2-.7 0a9 9 0 0 1-2.6-1.6 10 10 0 0 1-1.8-2.3c-.2-.3 0-.5.1-.6s.3-.4.4-.6c.1-.2.2-.3.3-.5a.4.4 0 0 0 0-.4c0-.2-.7-1.7-1-2.3s-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4s-1.2 1.2-1.2 2.9 1.2 3.4 1.4 3.6 2.4 3.7 5.8 5.1c.8.3 1.4.5 1.9.7 1 .3 1.9.3 2.6.2.8-.1 2.4-1 2.8-2s.3-1.8.2-2c-.1-.1-.3-.2-.6-.3z"/>
+        </svg>
+    </a>
 
     <!-- Footer -->
     <footer>
