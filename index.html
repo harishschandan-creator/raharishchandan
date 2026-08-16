@@ -38,10 +38,52 @@
             text-decoration: underline;
         }
 
+        /* Screen Reader Only Utility (IAAP / WCAG) */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
+        /* Skip to Content Link (WCAG 2.4.1) */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: var(--accent);
+            color: #ffffff;
+            padding: 8px 16px;
+            z-index: 100002;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 0 0 4px 0;
+            transition: top 0.3s ease;
+        }
+
+        .skip-link:focus {
+            top: 0;
+        }
+
         /* Accessible Keyboard Focus Indicator (WCAG 2.4.7) */
         a:focus-visible, button:focus-visible {
             outline: 3px solid var(--accent);
             outline-offset: 2px;
+        }
+
+        /* Respect for Reduced Motion (WCAG 2.3.3) */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
         }
 
         /* Highly Visible Top Credibility & Regulatory Bar */
@@ -401,6 +443,9 @@
 </head>
 <body>
 
+    <!-- Skip to Main Content Link (WCAG 2.4.1) -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
     <!-- High-Visibility Credibility & Regulatory Header Bar -->
     <div class="credibility-bar">
         <div class="credibility-container">
@@ -435,8 +480,8 @@
         </div>
     </header>
 
-    <!-- Main Landmark representing the primary content (Resolves Issue #2) -->
-    <main class="container">
+    <!-- Main Landmark with ID for Skip Link -->
+    <main id="main-content" class="container">
         <!-- Mandatory Standard Risk Warning -->
         <div class="risk-warning-box">
             <strong>Standard Risk Warning:</strong> Investment in securities market are subject to market risks. Read all the related documents carefully before investing.
@@ -455,7 +500,7 @@
             <strong>Statutory Disclaimer:</strong> Registration granted by SEBI, membership of RAASB and certification from NISM in no way guarantee performance of the intermediary or provide any assurance of returns to investors. Read all related documents carefully before investing.
         </div>
 
-        <!-- Services Section with Direct WhatsApp Links -->
+        <!-- Services Section with IAAP-Compliant Redirection Warnings -->
         <section id="services" class="section-block">
             <h2 class="section-title">Services Offered</h2>
             <p style="margin-bottom: 20px; color: var(--text-muted); font-size: 0.95rem;">Click on any service below to inquire directly via WhatsApp regarding Pricing, Periodicity, and Delivery Methods.</p>
@@ -467,33 +512,53 @@
                     <h3>1. Research Reports</h3>
                     <ul>
                         <li>
-                            <a href="https://wa.me/918894466882?text=Hi,%0A%0AI%20am%20interested%20in%20availing%20NIFTY%20Index%20Research%20Reports%20and%20would%20want%20to%20get%20details%20on%20Price,%20Periodicity%20%26%20Methods%20of%20delivery." class="service-link" target="_blank" rel="noopener">
+                            <a href="https://wa.me/918894466882?text=Hi,%0A%0AI%20am%20interested%20in%20availing%20NIFTY%20Index%20Research%20Reports%20and%20would%20want%20to%20get%20details%20on%20Price,%20Periodicity%20%26%20Methods%20of%20delivery." 
+                               class="service-link" 
+                               target="_blank" 
+                               rel="noopener"
+                               aria-label="Inquire about NIFTY Index via WhatsApp (Opens external application)">
                                 NIFTY Index
-                                <span class="wa-badge">Inquire</span>
+                                <span class="wa-badge" aria-hidden="true">Inquire</span>
                             </a>
                         </li>
                         <li>
-                            <a href="https://wa.me/918894466882?text=Hi,%0A%0AI%20am%20interested%20in%20availing%20BANKNIFTY%20Index%20Research%20Reports%20and%20would%20want%20to%20get%20details%20on%20Price,%20Periodicity%20%26%20Methods%20of%20delivery." class="service-link" target="_blank" rel="noopener">
+                            <a href="https://wa.me/918894466882?text=Hi,%0A%0AI%20am%20interested%20in%20availing%20BANKNIFTY%20Index%20Research%20Reports%20and%20would%20want%20to%20get%20details%20on%20Price,%20Periodicity%20%26%20Methods%20of%20delivery." 
+                               class="service-link" 
+                               target="_blank" 
+                               rel="noopener"
+                               aria-label="Inquire about BANKNIFTY Index via WhatsApp (Opens external application)">
                                 BANKNIFTY Index
-                                <span class="wa-badge">Inquire</span>
+                                <span class="wa-badge" aria-hidden="true">Inquire</span>
                             </a>
                         </li>
                         <li>
-                            <a href="https://wa.me/918894466882?text=Hi,%0A%0AI%20am%20interested%20in%20availing%20NIFTY%2050%20Equities%20Research%20Reports%20and%20would%20want%20to%20get%20details%20on%20Price,%20Periodicity%20%26%20Methods%20of%20delivery." class="service-link" target="_blank" rel="noopener">
+                            <a href="https://wa.me/918894466882?text=Hi,%0A%0AI%20am%20interested%20in%20availing%20NIFTY%2050%20Equities%20Research%20Reports%20and%20would%20want%20to%20get%20details%20on%20Price,%20Periodicity%20%26%20Methods%20of%20delivery." 
+                               class="service-link" 
+                               target="_blank" 
+                               rel="noopener"
+                               aria-label="Inquire about NIFTY 50 Equities via WhatsApp (Opens external application)">
                                 NIFTY 50 Equities
-                                <span class="wa-badge">Inquire</span>
+                                <span class="wa-badge" aria-hidden="true">Inquire</span>
                             </a>
                         </li>
                         <li>
-                            <a href="https://wa.me/918894466882?text=Hi,%0A%0AI%20am%20interested%20in%20availing%20NIFTY%20Midcap%20Research%20Reports%20and%20would%20want%20to%20get%20details%20on%20Price,%20Periodicity%20%26%20Methods%20of%20delivery." class="service-link" target="_blank" rel="noopener">
+                            <a href="https://wa.me/918894466882?text=Hi,%0A%0AI%20am%20interested%20in%20availing%20NIFTY%20Midcap%20Research%20Reports%20and%20would%20want%20to%20get%20details%20on%20Price,%20Periodicity%20%26%20Methods%20of%20delivery." 
+                               class="service-link" 
+                               target="_blank" 
+                               rel="noopener"
+                               aria-label="Inquire about NIFTY Midcap via WhatsApp (Opens external application)">
                                 NIFTY Midcap
-                                <span class="wa-badge">Inquire</span>
+                                <span class="wa-badge" aria-hidden="true">Inquire</span>
                             </a>
                         </li>
                         <li>
-                            <a href="https://wa.me/918894466882?text=Hi,%0A%0AI%20am%20interested%20in%20availing%20NIFTY%20Smallcap%20Research%20Reports%20and%20would%20want%20to%20get%20details%20on%20Price,%20Periodicity%20%26%20Methods%20of%20delivery." class="service-link" target="_blank" rel="noopener">
+                            <a href="https://wa.me/918894466882?text=Hi,%0A%0AI%20am%20interested%20in%20availing%20NIFTY%20Smallcap%20Research%20Reports%20and%20would%20want%20to%20get%20details%20on%20Price,%20Periodicity%20%26%20Methods%20of%20delivery." 
+                               class="service-link" 
+                               target="_blank" 
+                               rel="noopener"
+                               aria-label="Inquire about NIFTY Smallcap via WhatsApp (Opens external application)">
                                 NIFTY Smallcap
-                                <span class="wa-badge">Inquire</span>
+                                <span class="wa-badge" aria-hidden="true">Inquire</span>
                             </a>
                         </li>
                     </ul>
@@ -504,27 +569,43 @@
                     <h3>2. Recommendations / Calls</h3>
                     <ul>
                         <li>
-                            <a href="https://wa.me/918894466882?text=Hi,%0A%0AI%20am%20interested%20in%20availing%20Index%20Options%20(BANKNIFTY%20%2B%20NIFTY)%20Intraday%20Recommendations%20and%20would%20want%20to%20get%20details%20on%20Price,%20Periodicity%20%26%20Methods%20of%20delivery." class="service-link" target="_blank" rel="noopener">
+                            <a href="https://wa.me/918894466882?text=Hi,%0A%0AI%20am%20interested%20in%20availing%20Index%20Options%20(BANKNIFTY%20%2B%20NIFTY)%20Intraday%20Recommendations%20and%20would%20want%20to%20get%20details%20on%20Price,%20Periodicity%20%26%20Methods%20of%20delivery." 
+                               class="service-link" 
+                               target="_blank" 
+                               rel="noopener"
+                               aria-label="Inquire about Index Options Intraday via WhatsApp (Opens external application)">
                                 Index Options (BANKNIFTY + NIFTY) Intraday
-                                <span class="wa-badge">Inquire</span>
+                                <span class="wa-badge" aria-hidden="true">Inquire</span>
                             </a>
                         </li>
                         <li>
-                            <a href="https://wa.me/918894466882?text=Hi,%0A%0AI%20am%20interested%20in%20availing%20Index%20Options%20(BANKNIFTY%20%2B%20NIFTY)%20Short%20Term%20Recommendations%20and%20would%20want%20to%20get%20details%20on%20Price,%20Periodicity%20%26%20Methods%20of%20delivery." class="service-link" target="_blank" rel="noopener">
+                            <a href="https://wa.me/918894466882?text=Hi,%0A%0AI%20am%20interested%20in%20availing%20Index%20Options%20(BANKNIFTY%20%2B%20NIFTY)%20Short%20Term%20Recommendations%20and%20would%20want%20to%20get%20details%20on%20Price,%20Periodicity%20%26%20Methods%20of%20delivery." 
+                               class="service-link" 
+                               target="_blank" 
+                               rel="noopener"
+                               aria-label="Inquire about Index Options Short Term via WhatsApp (Opens external application)">
                                 Index Options (BANKNIFTY + NIFTY) Short Term
-                                <span class="wa-badge">Inquire</span>
+                                <span class="wa-badge" aria-hidden="true">Inquire</span>
                             </a>
                         </li>
                         <li>
-                            <a href="https://wa.me/918894466882?text=Hi,%0A%0AI%20am%20interested%20in%20availing%20Equity%20Options%20(Short%20Term)%20Recommendations%20and%20would%20want%20to%20get%20details%20on%20Price,%20Periodicity%20%26%20Methods%20of%20delivery." class="service-link" target="_blank" rel="noopener">
+                            <a href="https://wa.me/918894466882?text=Hi,%0A%0AI%20am%20interested%20in%20availing%20Equity%20Options%20(Short%20Term)%20Recommendations%20and%20would%20want%20to%20get%20details%20on%20Price,%20Periodicity%20%26%20Methods%20of%20delivery." 
+                               class="service-link" 
+                               target="_blank" 
+                               rel="noopener"
+                               aria-label="Inquire about Equity Options Short Term via WhatsApp (Opens external application)">
                                 Equity Options (Short Term)
-                                <span class="wa-badge">Inquire</span>
+                                <span class="wa-badge" aria-hidden="true">Inquire</span>
                             </a>
                         </li>
                         <li>
-                            <a href="https://wa.me/918894466882?text=Hi,%0A%0AI%20am%20interested%20in%20availing%20Expiry%20Day%20Intraday%20Calls%20and%20would%20want%20to%20get%20details%20on%20Price,%20Periodicity%20%26%20Methods%20of%20delivery." class="service-link" target="_blank" rel="noopener">
+                            <a href="https://wa.me/918894466882?text=Hi,%0A%0AI%20am%20interested%20in%20availing%20Expiry%20Day%20Intraday%20Calls%20and%20would%20want%20to%20get%20details%20on%20Price,%20Periodicity%20%26%20Methods%20of%20delivery." 
+                               class="service-link" 
+                               target="_blank" 
+                               rel="noopener"
+                               aria-label="Inquire about Expiry Day Intraday Calls via WhatsApp (Opens external application)">
                                 Expiry Day Intraday Calls
-                                <span class="wa-badge">Inquire</span>
+                                <span class="wa-badge" aria-hidden="true">Inquire</span>
                             </a>
                         </li>
                     </ul>
@@ -535,39 +616,64 @@
                     <h3>3. Learning (Individuals & Organizations)</h3>
                     <ul>
                         <li>
-                            <a href="https://wa.me/918894466882?text=Hi,%0A%0AI%20am%20interested%20in%20availing%20Comprehensive%20Mentorship%20Program%20and%20would%20want%20to%20get%20details%20on%20Price,%20Periodicity%20%26%20Methods%20of%20delivery." class="service-link" style="border-left: 3px solid var(--primary);" target="_blank" rel="noopener">
+                            <a href="https://wa.me/918894466882?text=Hi,%0A%0AI%20am%20interested%20in%20availing%20Comprehensive%20Mentorship%20Program%20and%20would%20want%20to%20get%20details%20on%20Price,%20Periodicity%20%26%20Methods%20of%20delivery." 
+                               class="service-link" 
+                               style="border-left: 3px solid var(--primary);" 
+                               target="_blank" 
+                               rel="noopener"
+                               aria-label="Inquire about Comprehensive Mentorship Program via WhatsApp (Opens external application)">
                                 <strong>Comprehensive Mentorship Program</strong>
-                                <span class="wa-badge">Inquire</span>
+                                <span class="wa-badge" aria-hidden="true">Inquire</span>
                             </a>
                         </li>
                         <li>
-                            <a href="https://wa.me/918894466882?text=Hi,%0A%0AI%20am%20interested%20in%20availing%20Stock%20Market%20Basics%20Learning%20and%20would%20want%20to%20get%20details%20on%20Price,%20Periodicity%20%26%20Methods%20of%20delivery." class="service-link" target="_blank" rel="noopener">
+                            <a href="https://wa.me/918894466882?text=Hi,%0A%0AI%20am%20interested%20in%20availing%20Stock%20Market%20Basics%20Learning%20and%20would%20want%20to%20get%20details%20on%20Price,%20Periodicity%20%26%20Methods%20of%20delivery." 
+                               class="service-link" 
+                               target="_blank" 
+                               rel="noopener"
+                               aria-label="Inquire about Stock Market Basics via WhatsApp (Opens external application)">
                                 Stock Market Basics
-                                <span class="wa-badge">Inquire</span>
+                                <span class="wa-badge" aria-hidden="true">Inquire</span>
                             </a>
                         </li>
                         <li>
-                            <a href="https://wa.me/918894466882?text=Hi,%0A%0AI%20am%20interested%20in%20availing%20Managing%20Personal%20Finance%20Learning%20and%20would%20want%20to%20get%20details%20on%20Price,%20Periodicity%20%26%20Methods%20of%20delivery." class="service-link" target="_blank" rel="noopener">
+                            <a href="https://wa.me/918894466882?text=Hi,%0A%0AI%20am%20interested%20in%20availing%20Managing%20Personal%20Finance%20Learning%20and%20would%20want%20to%20get%20details%20on%20Price,%20Periodicity%20%26%20Methods%20of%20delivery." 
+                               class="service-link" 
+                               target="_blank" 
+                               rel="noopener"
+                               aria-label="Inquire about Managing Personal Finance via WhatsApp (Opens external application)">
                                 Managing Personal Finance
-                                <span class="wa-badge">Inquire</span>
+                                <span class="wa-badge" aria-hidden="true">Inquire</span>
                             </a>
                         </li>
                         <li>
-                            <a href="https://wa.me/918894466882?text=Hi,%0A%0AI%20am%20interested%20in%20availing%20Fundamental%20Analysis%20(Basics,%20Advanced%20%26%20Expert%20Levels)%20and%20would%20want%20to%20get%20details%20on%20Price,%20Periodicity%20%26%20Methods%20of%20delivery." class="service-link" target="_blank" rel="noopener">
+                            <a href="https://wa.me/918894466882?text=Hi,%0A%0AI%20am%20interested%20in%20availing%20Fundamental%20Analysis%20(Basics,%20Advanced%20%26%20Expert%20Levels)%20and%20would%20want%20to%20get%20details%20on%20Price,%20Periodicity%20%26%20Methods%20of%20delivery." 
+                               class="service-link" 
+                               target="_blank" 
+                               rel="noopener"
+                               aria-label="Inquire about Fundamental Analysis via WhatsApp (Opens external application)">
                                 Fundamental Analysis (All Levels)
-                                <span class="wa-badge">Inquire</span>
+                                <span class="wa-badge" aria-hidden="true">Inquire</span>
                             </a>
                         </li>
                         <li>
-                            <a href="https://wa.me/918894466882?text=Hi,%0A%0AI%20am%20interested%20in%20availing%20Technical%20Analysis%20(Basics,%20Advanced%20%26%20Expert%20Levels)%20and%20would%20want%20to%20get%20details%20on%20Price,%20Periodicity%20%26%20Methods%20of%20delivery." class="service-link" target="_blank" rel="noopener">
+                            <a href="https://wa.me/918894466882?text=Hi,%0A%0AI%20am%20interested%20in%20availing%20Technical%20Analysis%20(Basics,%20Advanced%20%26%20Expert%20Levels)%20and%20would%20want%20to%20get%20details%20on%20Price,%20Periodicity%20%26%20Methods%20of%20delivery." 
+                               class="service-link" 
+                               target="_blank" 
+                               rel="noopener"
+                               aria-label="Inquire about Technical Analysis via WhatsApp (Opens external application)">
                                 Technical Analysis (All Levels)
-                                <span class="wa-badge">Inquire</span>
+                                <span class="wa-badge" aria-hidden="true">Inquire</span>
                             </a>
                         </li>
                         <li>
-                            <a href="https://wa.me/918894466882?text=Hi,%0A%0AI%20am%20interested%20in%20availing%20Money%20Management%20%26%20Monetary%20Risk%20Management%20and%20would%20want%20to%20get%20details%20on%20Price,%20Periodicity%20%26%20Methods%20of%20delivery." class="service-link" target="_blank" rel="noopener">
+                            <a href="https://wa.me/918894466882?text=Hi,%0A%0AI%20am%20interested%20in%20availing%20Money%20Management%20%26%20Monetary%20Risk%20Management%20and%20would%20want%20to%20get%20details%20on%20Price,%20Periodicity%20%26%20Methods%20of%20delivery." 
+                               class="service-link" 
+                               target="_blank" 
+                               rel="noopener"
+                               aria-label="Inquire about Money and Risk Management via WhatsApp (Opens external application)">
                                 Money & Risk Management
-                                <span class="wa-badge">Inquire</span>
+                                <span class="wa-badge" aria-hidden="true">Inquire</span>
                             </a>
                         </li>
                     </ul>
@@ -630,11 +736,11 @@
             <div class="card">
                 <h3>Escalation Matrix for Investor Complaints</h3>
                 <p><strong>Designated Compliance & Grievance Officer:</strong> S Harish Chandan</p>
-                <p>If you have grievances regarding research reports or services, please contact us at <a href="mailto:support@raharishchandan.com" title="Opens email application">support@raharishchandan.com</a> or call <a href="tel:+918894466882">+91 88944 66882</a>. We aim to acknowledge and resolve issues within 7 working days.</p>
+                <p>If you have grievances regarding research reports or services, please contact us at <a href="mailto:support@raharishchandan.com" title="Opens email application">support@raharishchandan.com<span class="sr-only"> (Opens email client)</span></a> or call <a href="tel:+918894466882">+91 88944 66882<span class="sr-only"> (Initiates phone call)</span></a>. We aim to acknowledge and resolve issues within 7 working days.</p>
                 <p style="margin-top: 10px;">If your complaint is not resolved satisfactorily, you may file a complaint with SEBI via the official portals below:</p>
                 <ul style="padding-left: 20px; margin-top: 6px;">
-                    <li><strong>SEBI SCORES Portal:</strong> <a href="https://scores.sebi.gov.in" target="_blank" rel="noopener">scores.sebi.gov.in</a></li>
-                    <li><strong>SMART Online Dispute Resolution (ODR):</strong> <a href="https://smartodr.in" target="_blank" rel="noopener">smartodr.in</a></li>
+                    <li><strong>SEBI SCORES Portal:</strong> <a href="https://scores.sebi.gov.in" target="_blank" rel="noopener" aria-label="SEBI SCORES Portal (Opens in a new tab)">scores.sebi.gov.in</a></li>
+                    <li><strong>SMART Online Dispute Resolution (ODR):</strong> <a href="https://smartodr.in" target="_blank" rel="noopener" aria-label="SMART Online Dispute Resolution Portal (Opens in a new tab)">smartodr.in</a></li>
                 </ul>
             </div>
         </section>
@@ -685,8 +791,12 @@
         </section>
     </main>
 
-    <!-- Floating WhatsApp Button with aria-hidden on decorative SVG (Resolves Issue #1) -->
-    <a href="https://wa.me/918894466882?text=Hello%20RA%20S%20Harish%20Chandan,%20I%20have%20an%20inquiry%20regarding%20your%20services." class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contact on WhatsApp">
+    <!-- Floating WhatsApp Button with Redirection Notice -->
+    <a href="https://wa.me/918894466882?text=Hello%20RA%20S%20Harish%20Chandan,%20I%20have%20an%20inquiry%20regarding%20your%20services." 
+       class="whatsapp-float" 
+       target="_blank" 
+       rel="noopener" 
+       aria-label="Contact on WhatsApp (Opens external application)">
         <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false">
             <path d="M16 2a13 13 0 0 0-11 20l-2 6 6-2a13 13 0 1 0 7-24zm0 24a11 11 0 0 1-5.6-1.5l-.4-.2-4.2 1.1 1.1-4.1-.3-.4A11 11 0 1 1 16 26zm6-8c-.3-.2-1.9-1-2.2-1.1s-.5-.2-.7.2-.8 1.1-1 1.3-.4.2-.7 0a9 9 0 0 1-2.6-1.6 10 10 0 0 1-1.8-2.3c-.2-.3 0-.5.1-.6s.3-.4.4-.6c.1-.2.2-.3.3-.5a.4.4 0 0 0 0-.4c0-.2-.7-1.7-1-2.3s-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4s-1.2 1.2-1.2 2.9 1.2 3.4 1.4 3.6 2.4 3.7 5.8 5.1c.8.3 1.4.5 1.9.7 1 .3 1.9.3 2.6.2.8-.1 2.4-1 2.8-2s.3-1.8.2-2c-.1-.1-.3-.2-.6-.3z"/>
         </svg>
