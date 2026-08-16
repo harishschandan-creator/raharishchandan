@@ -27,6 +27,11 @@
             background-color: #ffffff;
         }
 
+        a {
+            color: var(--accent);
+            text-decoration: underline;
+        }
+
         /* Header & Navigation */
         header {
             position: sticky;
@@ -132,13 +137,44 @@
         }
 
         .service-card ul {
-            padding-left: 20px;
+            padding-left: 0;
+            list-style: none;
             margin-bottom: 0;
         }
 
         .service-card li {
-            margin-bottom: 8px;
+            margin-bottom: 12px;
             font-size: 0.92rem;
+        }
+
+        .service-link {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: var(--bg-light);
+            padding: 10px 12px;
+            border-radius: 6px;
+            border: 1px solid var(--border);
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+
+        .service-link:hover {
+            border-color: var(--whatsapp);
+            background: #f0fdf4;
+            color: #15803d;
+        }
+
+        .service-link span.wa-badge {
+            font-size: 0.75rem;
+            background-color: var(--whatsapp);
+            color: white;
+            padding: 3px 8px;
+            border-radius: 12px;
+            font-weight: 600;
+            white-space: nowrap;
         }
 
         /* Regulatory Cards & Tables */
@@ -277,11 +313,11 @@
                     </tr>
                     <tr>
                         <td><strong>Contact Phone</strong></td>
-                        <td>+91 88944 66882</td>
+                        <td><a href="tel:+918894466882">+91 88944 66882</a></td>
                     </tr>
                     <tr>
                         <td><strong>Registered Email</strong></td>
-                        <td>support@raharishchandan.com</td>
+                        <td><a href="mailto:support@raharishchandan.com">support@raharishchandan.com</a></td>
                     </tr>
                     <tr>
                         <td><strong>Location / Jurisdiction</strong></td>
@@ -294,17 +330,44 @@
         <!-- Services Section -->
         <section id="services" class="section-block">
             <h2>Services Offered</h2>
+            <p style="margin-bottom: 20px; color: #64748b; font-size: 0.95rem;">Click on any service below to inquire directly via WhatsApp regarding Pricing, Periodicity, and Delivery Methods.</p>
+            
             <div class="services-grid">
                 
                 <!-- Research Reports Card -->
                 <div class="service-card">
                     <h3>1. Research Reports</h3>
                     <ul>
-                        <li>NIFTY Index Coverage</li>
-                        <li>BANKNIFTY Index Coverage</li>
-                        <li>NIFTY 50 Equities Analysis</li>
-                        <li>NIFTY Midcap Segment</li>
-                        <li>NIFTY Smallcap Segment</li>
+                        <li>
+                            <a href="https://wa.me/918894466882?text=Hi,%0A%0AI%20am%20interested%20in%20availing%20NIFTY%20Index%20Research%20Reports%20and%20would%20want%20to%20get%20details%20on%20Price,%20Periodicity%20%26%20Methods%20of%20delivery." class="service-link" target="_blank" rel="noopener">
+                                NIFTY Index
+                                <span class="wa-badge">Inquire</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://wa.me/918894466882?text=Hi,%0A%0AI%20am%20interested%20in%20availing%20BANKNIFTY%20Index%20Research%20Reports%20and%20would%20want%20to%20get%20details%20on%20Price,%20Periodicity%20%26%20Methods%20of%20delivery." class="service-link" target="_blank" rel="noopener">
+                                BANKNIFTY Index
+                                <span class="wa-badge">Inquire</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://wa.me/918894466882?text=Hi,%0A%0AI%20am%20interested%20in%20availing%20NIFTY%2050%20Equities%20Research%20Reports%20and%20would%20want%20to%20get%20details%20on%20Price,%20Periodicity%20%26%20Methods%20of%20delivery." class="service-link" target="_blank" rel="noopener">
+                                NIFTY 50 Equities
+                                <span class="wa-badge">Inquire</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://wa.me/918894466882?text=Hi,%0A%0AI%20am%20interested%20in%20availing%20NIFTY%20Midcap%20Research%20Reports%20and%20would%20want%20to%20get%20details%20on%20Price,%20Periodicity%20%26%20Methods%20of%20delivery." class="service-link" target="_blank" rel="noopener">
+                                NIFTY Midcap
+                                <span class="wa-badge">Inquire</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://wa.me/918894466882?text=Hi,%0A%0AI%20am%20interested%20in%20availing%20NIFTY%20Smallcap%20Research%20Reports%20and%20would%20want%20to%20get%20details%20on%20Price,%20Periodicity%20%26%20Methods%20of%20delivery." class="service-link" target="_blank" rel="noopener">
+                                NIFTY Smallcap
+                                <span class="wa-badge">Inquire</span>
+                            </a>
+                        </li>
                     </ul>
                 </div>
 
@@ -312,10 +375,30 @@
                 <div class="service-card">
                     <h3>2. Recommendations / Calls</h3>
                     <ul>
-                        <li>Index Options (BANKNIFTY + NIFTY) Intraday</li>
-                        <li>Index Options (BANKNIFTY + NIFTY) Short Term</li>
-                        <li>Equity Options (Short Term)</li>
-                        <li>Index & Equity Options Zero or Hero</li>
+                        <li>
+                            <a href="https://wa.me/918894466882?text=Hi,%0A%0AI%20am%20interested%20in%20availing%20Index%20Options%20(BANKNIFTY%20%2B%20NIFTY)%20Intraday%20Recommendations%20and%20would%20want%20to%20get%20details%20on%20Price,%20Periodicity%20%26%20Methods%20of%20delivery." class="service-link" target="_blank" rel="noopener">
+                                Index Options (BANKNIFTY + NIFTY) Intraday
+                                <span class="wa-badge">Inquire</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://wa.me/918894466882?text=Hi,%0A%0AI%20am%20interested%20in%20availing%20Index%20Options%20(BANKNIFTY%20%2B%20NIFTY)%20Short%20Term%20Recommendations%20and%20would%20want%20to%20get%20details%20on%20Price,%20Periodicity%20%26%20Methods%20of%20delivery." class="service-link" target="_blank" rel="noopener">
+                                Index Options (BANKNIFTY + NIFTY) Short Term
+                                <span class="wa-badge">Inquire</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://wa.me/918894466882?text=Hi,%0A%0AI%20am%20interested%20in%20availing%20Equity%20Options%20(Short%20Term)%20Recommendations%20and%20would%20want%20to%20get%20details%20on%20Price,%20Periodicity%20%26%20Methods%20of%20delivery." class="service-link" target="_blank" rel="noopener">
+                                Equity Options (Short Term)
+                                <span class="wa-badge">Inquire</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://wa.me/918894466882?text=Hi,%0A%0AI%20am%20interested%20in%20availing%20Index%20%26%20Equity%20Options%20Zero%20or%20Hero%20Recommendations%20and%20would%20want%20to%20get%20details%20on%20Price,%20Periodicity%20%26%20Methods%20of%20delivery." class="service-link" target="_blank" rel="noopener">
+                                Index & Equity Options Zero or Hero
+                                <span class="wa-badge">Inquire</span>
+                            </a>
+                        </li>
                     </ul>
                 </div>
 
@@ -323,12 +406,42 @@
                 <div class="service-card">
                     <h3>3. Learning (Individuals & Organizations)</h3>
                     <ul>
-                        <li><strong>Comprehensive Mentorship Program</strong> (Covers all modules below)</li>
-                        <li>Stock Market Basics</li>
-                        <li>Managing Personal Finance</li>
-                        <li>Fundamental Analysis (Basics, Advanced & Expert Levels)</li>
-                        <li>Technical Analysis (Basics, Advanced & Expert Levels)</li>
-                        <li>Money Management & Monetary Risk Management for Individuals</li>
+                        <li>
+                            <a href="https://wa.me/918894466882?text=Hi,%0A%0AI%20am%20interested%20in%20availing%20Comprehensive%20Mentorship%20Program%20and%20would%20want%20to%20get%20details%20on%20Price,%20Periodicity%20%26%20Methods%20of%20delivery." class="service-link" style="border-left: 3px solid var(--primary);" target="_blank" rel="noopener">
+                                <strong>Comprehensive Mentorship Program</strong>
+                                <span class="wa-badge">Inquire</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://wa.me/918894466882?text=Hi,%0A%0AI%20am%20interested%20in%20availing%20Stock%20Market%20Basics%20Learning%20and%20would%20want%20to%20get%20details%20on%20Price,%20Periodicity%20%26%20Methods%20of%20delivery." class="service-link" target="_blank" rel="noopener">
+                                Stock Market Basics
+                                <span class="wa-badge">Inquire</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://wa.me/918894466882?text=Hi,%0A%0AI%20am%20interested%20in%20availing%20Managing%20Personal%20Finance%20Learning%20and%20would%20want%20to%20get%20details%20on%20Price,%20Periodicity%20%26%20Methods%20of%20delivery." class="service-link" target="_blank" rel="noopener">
+                                Managing Personal Finance
+                                <span class="wa-badge">Inquire</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://wa.me/918894466882?text=Hi,%0A%0AI%20am%20interested%20in%20availing%20Fundamental%20Analysis%20(Basics,%20Advanced%20%26%20Expert%20Levels)%20and%20would%20want%20to%20get%20details%20on%20Price,%20Periodicity%20%26%20Methods%20of%20delivery." class="service-link" target="_blank" rel="noopener">
+                                Fundamental Analysis (All Levels)
+                                <span class="wa-badge">Inquire</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://wa.me/918894466882?text=Hi,%0A%0AI%20am%20interested%20in%20availing%20Technical%20Analysis%20(Basics,%20Advanced%20%26%20Expert%20Levels)%20and%20would%20want%20to%20get%20details%20on%20Price,%20Periodicity%20%26%20Methods%20of%20delivery." class="service-link" target="_blank" rel="noopener">
+                                Technical Analysis (All Levels)
+                                <span class="wa-badge">Inquire</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://wa.me/918894466882?text=Hi,%0A%0AI%20am%20interested%20in%20availing%20Money%20Management%20%26%20Monetary%20Risk%20Management%20and%20would%20want%20to%20get%20details%20on%20Price,%20Periodicity%20%26%20Methods%20of%20delivery." class="service-link" target="_blank" rel="noopener">
+                                Money & Risk Management
+                                <span class="wa-badge">Inquire</span>
+                            </a>
+                        </li>
                     </ul>
                 </div>
 
@@ -409,7 +522,7 @@
 
             <div class="card">
                 <h3>Escalation Matrix for Investor Complaints</h3>
-                <p>If you have grievances regarding research reports or services, please contact us at <code>support@raharishchandan.com</code> or call <strong>+91 88944 66882</strong>. We aim to acknowledge and resolve issues within 7 working days.</p>
+                <p>If you have grievances regarding research reports or services, please contact us at <a href="mailto:support@raharishchandan.com">support@raharishchandan.com</a> or call <a href="tel:+918894466882">+91 88944 66882</a>. We aim to acknowledge and resolve issues within 7 working days.</p>
                 <p>If your complaint is not resolved satisfactorily, you may file a complaint with SEBI via the official portals below:</p>
                 <ul>
                     <li><strong>SEBI SCORES Portal:</strong> <a href="https://scores.sebi.gov.in" target="_blank" rel="noopener">scores.sebi.gov.in</a></li>
