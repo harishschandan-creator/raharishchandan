@@ -106,6 +106,41 @@
             color: var(--primary);
         }
 
+        /* Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .service-card {
+            background: #ffffff;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 24px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            border-top: 4px solid var(--accent);
+        }
+
+        .service-card h3 {
+            margin-top: 0;
+            color: var(--primary);
+            font-size: 1.15rem;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 10px;
+        }
+
+        .service-card ul {
+            padding-left: 20px;
+            margin-bottom: 0;
+        }
+
+        .service-card li {
+            margin-bottom: 8px;
+            font-size: 0.92rem;
+        }
+
         /* Regulatory Cards & Tables */
         .card {
             background: #ffffff;
@@ -208,6 +243,7 @@
         </div>
         <nav>
             <a href="#about">About</a>
+            <a href="#services">Services</a>
             <a href="#disclosures">Disclosures</a>
             <a href="#complaints">Complaints Data</a>
             <a href="#charter">Investor Charter</a>
@@ -252,6 +288,50 @@
                         <td>Bengaluru, Karnataka, India</td>
                     </tr>
                 </table>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="section-block">
+            <h2>Services Offered</h2>
+            <div class="services-grid">
+                
+                <!-- Research Reports Card -->
+                <div class="service-card">
+                    <h3>1. Research Reports</h3>
+                    <ul>
+                        <li>NIFTY Index Coverage</li>
+                        <li>BANKNIFTY Index Coverage</li>
+                        <li>NIFTY 50 Equities Analysis</li>
+                        <li>NIFTY Midcap Segment</li>
+                        <li>NIFTY Smallcap Segment</li>
+                    </ul>
+                </div>
+
+                <!-- Recommendations / Calls Card -->
+                <div class="service-card">
+                    <h3>2. Recommendations / Calls</h3>
+                    <ul>
+                        <li>Index Options (BANKNIFTY + NIFTY) Intraday</li>
+                        <li>Index Options (BANKNIFTY + NIFTY) Short Term</li>
+                        <li>Equity Options (Short Term)</li>
+                        <li>Index & Equity Options Zero or Hero</li>
+                    </ul>
+                </div>
+
+                <!-- Learning Card -->
+                <div class="service-card">
+                    <h3>3. Learning (Individuals & Organizations)</h3>
+                    <ul>
+                        <li><strong>Comprehensive Mentorship Program</strong> (Covers all modules below)</li>
+                        <li>Stock Market Basics</li>
+                        <li>Managing Personal Finance</li>
+                        <li>Fundamental Analysis (Basics, Advanced & Expert Levels)</li>
+                        <li>Technical Analysis (Basics, Advanced & Expert Levels)</li>
+                        <li>Money Management & Monetary Risk Management for Individuals</li>
+                    </ul>
+                </div>
+
             </div>
         </section>
 
@@ -357,23 +437,23 @@
             <h2>Terms of Service & Refund Policy</h2>
             <div class="card">
                 <h3>1. Strict No-Refund Policy</h3>
-                <p>All fee payments for research subscriptions, access to research reports, or analytical services are <strong>final and strictly non-refundable</strong>. No full or partial refunds, cancellations, or transfers will be issued under any circumstances once access to research materials has been provided.</p>
+                <p>All fee payments for research subscriptions, access to research reports, educational modules, or analytical services are <strong>final and strictly non-refundable</strong>. No full or partial refunds, cancellations, or transfers will be issued under any circumstances once access to research materials has been provided.</p>
 
                 <h3>2. No Direct Execution or Portfolio Management</h3>
-                <p>S Harish Chandan provides research reports and market insights strictly for educational and informational purposes. We do not provide discretionary portfolio management, handle client funds, or execute trades on behalf of clients.</p>
+                <p>S Harish Chandan provides research reports, recommendations, and educational content strictly for informational purposes. We do not provide discretionary portfolio management, handle client funds, or execute trades on behalf of clients.</p>
 
                 <h3>3. No Profit-Sharing or Return Guarantees</h3>
                 <p>In adherence to SEBI regulations, we strictly operate on a fixed fee or subscription basis. We do not engage in profit-sharing arrangements, performance fee sharing, or assurance of capital preservation.</p>
 
                 <h3>4. Intellectual Property Notice</h3>
-                <p>All research notes, charts, technical indicators, and publications on this site are the intellectual property of S Harish Chandan. Redistribution, copying, or forwarding of reports without express written consent is prohibited.</p>
+                <p>All research notes, charts, technical indicators, and educational materials on this site are the intellectual property of S Harish Chandan. Redistribution, copying, or forwarding of reports without express written consent is prohibited.</p>
             </div>
         </section>
 
     </div>
 
     <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/918894466882?text=Hello%20RA%20S%20Harish%20Chandan,%20I%20have%20an%20inquiry%20regarding%20your%20research%20services." class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contact on WhatsApp">
+    <a href="https://wa.me/918894466882?text=Hello%20RA%20S%20Harish%20Chandan,%20I%20have%20an%20inquiry%20regarding%20your%20services." class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contact on WhatsApp">
         <svg viewBox="0 0 32 32">
             <path d="M16 2a13 13 0 0 0-11 20l-2 6 6-2a13 13 0 1 0 7-24zm0 24a11 11 0 0 1-5.6-1.5l-.4-.2-4.2 1.1 1.1-4.1-.3-.4A11 11 0 1 1 16 26zm6-8c-.3-.2-1.9-1-2.2-1.1s-.5-.2-.7.2-.8 1.1-1 1.3-.4.2-.7 0a9 9 0 0 1-2.6-1.6 10 10 0 0 1-1.8-2.3c-.2-.3 0-.5.1-.6s.3-.4.4-.6c.1-.2.2-.3.3-.5a.4.4 0 0 0 0-.4c0-.2-.7-1.7-1-2.3s-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4s-1.2 1.2-1.2 2.9 1.2 3.4 1.4 3.6 2.4 3.7 5.8 5.1c.8.3 1.4.5 1.9.7 1 .3 1.9.3 2.6.2.8-.1 2.4-1 2.8-2s.3-1.8.2-2c-.1-.1-.3-.2-.6-.3z"/>
         </svg>
@@ -383,6 +463,7 @@
     <footer>
         <p><strong>S Harish Chandan</strong> | SEBI Registered Research Analyst (Reg No. INH000012768 | RAASB No. 5826)</p>
         <p>
+            <a href="#services">Services</a> | 
             <a href="#disclosures">Disclosures</a> | 
             <a href="#complaints">Complaints Data</a> | 
             <a href="#charter">Investor Charter</a> | 
