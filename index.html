@@ -32,13 +32,14 @@
             line-height: 1.6;
         }
 
-        /* Top Credibility & Regulatory Bar */
+        /* Highly Visible Top Credibility & Regulatory Bar */
         .credibility-bar {
-            background-color: var(--primary);
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
             color: #ffffff;
-            padding: 10px 16px;
-            font-size: 0.85rem;
-            border-bottom: 2px solid var(--accent);
+            padding: 14px 20px;
+            font-size: 0.9rem;
+            border-bottom: 3px solid #3b82f6;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
         }
 
         .credibility-container {
@@ -48,35 +49,51 @@
             flex-wrap: wrap;
             justify-content: space-between;
             align-items: center;
-            gap: 12px;
+            gap: 16px;
         }
 
         .credibility-items {
             display: flex;
             flex-wrap: wrap;
-            gap: 16px;
+            gap: 12px;
             align-items: center;
         }
 
-        .cred-item {
+        .cred-badge {
+            background-color: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 6px 12px;
+            border-radius: 6px;
             display: inline-flex;
             align-items: center;
             gap: 6px;
+            font-weight: 500;
         }
 
-        .cred-item strong {
-            color: #93c5fd;
-            font-weight: 600;
+        .cred-badge strong {
+            color: #60a5fa;
+            font-weight: 700;
+            letter-spacing: 0.5px;
         }
 
-        .upi-badge {
-            background-color: rgba(37, 99, 235, 0.25);
-            border: 1px solid rgba(147, 197, 253, 0.4);
-            padding: 3px 10px;
-            border-radius: 20px;
+        .upi-highlight-badge {
+            background-color: #1e3a8a;
+            border: 1px solid #60a5fa;
+            padding: 6px 14px;
+            border-radius: 6px;
             font-family: monospace;
-            font-size: 0.85rem;
+            font-size: 0.95rem;
             color: #ffffff;
+            font-weight: 600;
+            box-shadow: inset 0 1px 2px rgba(0,0,0,0.2);
+        }
+
+        .upi-highlight-badge span {
+            color: #93c5fd;
+            margin-right: 6px;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            font-size: 0.85rem;
+            font-weight: normal;
         }
 
         /* Header / Nav */
@@ -305,17 +322,18 @@
 </head>
 <body>
 
-    <!-- Credibility & Regulatory Header Bar -->
+    <!-- High-Visibility Credibility & Regulatory Header Bar -->
     <div class="credibility-bar">
         <div class="credibility-container">
             <div class="credibility-items">
-                <span class="cred-item"><strong>S Harish Chandan</strong></span>
-                <span class="cred-item">SEBI Reg: <strong>INH000012768</strong></span>
-                <span class="cred-item">RAASB No: <strong>5826</strong></span>
+                <span class="cred-badge">Analyst: <strong>S Harish Chandan</strong></span>
+                <span class="cred-badge">SEBI Reg: <strong>INH000012768</strong></span>
+                <span class="cred-badge">RAASB No: <strong>5826</strong></span>
             </div>
-            <div class="cred-item">
-                <span>Verified Official UPI:</span>
-                <span class="upi-badge">harish.ra@validhdfc</span>
+            <div>
+                <div class="upi-highlight-badge">
+                    <span>Official UPI:</span>harish.ra@validhdfc
+                </div>
             </div>
         </div>
     </div>
@@ -345,9 +363,9 @@
 
         <!-- Hero Section -->
         <section id="about" class="hero">
-            <h1>Independent Market Intelligence for Serious Traders & Investors</h1>
+            <h1>Independent Research & Market Intelligence</h1>
             <p>
-                Most market commentary is pure noise. I focus on what actually moves Indian equities, index options, and key macroeconomic trends—delivering clean, data-backed research so you can make informed decisions, manage risk, and protect your capital without the hype.
+                We deliver clear, reliable, multiple-signal analysis that you can actually act on. By tracking key institutional drivers across Indian equities, index derivatives, and macro shifts, our research helps you stay ahead of market turns with strict risk management and zero fluff.
             </p>
             <div class="cta-buttons">
                 <a href="#research" class="btn btn-primary">Explore Research Focus</a>
