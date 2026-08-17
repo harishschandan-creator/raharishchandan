@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>S Harish Chandan | SEBI Registered Research Analyst</title>
-    <meta name="description" content="Independent, data-driven market research reports, technical analysis, and macroeconomic insights on Indian capital markets by SEBI Registered Research Analyst S Harish Chandan.">
+    <meta name="description" content="Independent, data-driven market research reports, technical analysis, and macroeconomic insights on Indian capital markets by SEBI Registered Research Analyst S Harish Chandan (INH000012768).">
     <style>
         :root {
             --primary: #0f172a;
@@ -19,6 +19,10 @@
             --warning-bg: #fffbeb;
             --warning-border: #fef3c7;
             --warning-text: #b45309;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         * {
@@ -75,11 +79,13 @@
         }
 
         @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
             * {
                 animation-duration: 0.01ms !important;
                 animation-iteration-count: 1 !important;
                 transition-duration: 0.01ms !important;
-                scroll-behavior: auto !important;
             }
         }
 
@@ -184,8 +190,8 @@
         nav a {
             color: var(--text-main);
             text-decoration: none;
-            margin-left: 20px;
-            font-size: 0.95rem;
+            margin-left: 18px;
+            font-size: 0.9rem;
             font-weight: 500;
         }
 
@@ -291,7 +297,7 @@
 
         .service-link span.wa-badge {
             font-size: 0.75rem;
-            background-color: var(--whatsapp-dark); /* Contrast fixed to AA/AAA compliance */
+            background-color: var(--whatsapp-dark);
             color: #ffffff;
             padding: 3px 8px;
             border-radius: 12px;
@@ -309,33 +315,10 @@
             color: #991b1b;
         }
 
-        .card {
-            background: #ffffff;
-            border: 1px solid var(--border);
-            padding: 24px;
-            border-radius: 8px;
-            margin: 20px 0;
-        }
-
-        .card h3 {
-            font-size: 1.1rem;
-            color: var(--primary);
-            margin-bottom: 10px;
-        }
-
-        .statutory-card {
-            background-color: var(--bg-light);
-            border-left: 4px solid var(--accent);
-            padding: 16px 20px;
-            border-radius: 0 6px 6px 0;
-            margin: 24px 0;
-            font-size: 0.9rem;
-            color: var(--text-main);
-        }
-
         .section-block {
             padding: 40px 0;
             border-top: 1px solid var(--border);
+            scroll-margin-top: 110px; /* Ensures anchor links position cleanly below sticky header */
         }
 
         .section-title {
@@ -343,6 +326,34 @@
             color: var(--primary);
             margin-bottom: 16px;
             font-weight: 700;
+        }
+
+        .compliance-card {
+            background: var(--bg-light);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 24px;
+            margin: 20px 0;
+        }
+
+        .compliance-card h3 {
+            color: var(--primary);
+            font-size: 1.2rem;
+            margin-bottom: 12px;
+        }
+
+        .compliance-card p, .compliance-card ul {
+            font-size: 0.92rem;
+            color: var(--text-main);
+            margin-bottom: 12px;
+        }
+
+        .compliance-card ul {
+            padding-left: 20px;
+        }
+
+        .compliance-card li {
+            margin-bottom: 6px;
         }
 
         table {
@@ -417,6 +428,10 @@
             font-size: 0.95rem;
         }
 
+        .footer-col p {
+            margin-bottom: 8px;
+        }
+
         .footer-bottom {
             max-width: 1100px;
             margin: 30px auto 0 auto;
@@ -435,7 +450,7 @@
 <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <!-- Header landmark containing credibility bar and navigation -->
+    <!-- Header & Credibility Bar -->
     <header>
         <div class="credibility-bar">
             <div class="credibility-container">
@@ -456,8 +471,9 @@
                 </a>
                 <nav>
                     <a href="#services">Services</a>
-                    <a href="#disclosures">Disclosures</a>
+                    <a href="#charter">Investor Charter</a>
                     <a href="#grievance">Grievance</a>
+                    <a href="#terms">Terms & Refund</a>
                 </nav>
             </div>
         </div>
@@ -469,11 +485,13 @@
                 Investment in securities market are subject to market risks. Read all the related documents carefully before investing.
             </div>
 
+            <!-- Hero Section -->
             <section class="hero">
                 <h1>Independent Research & Capital Market Insights</h1>
-                <p>Data-driven technical analysis, equity research, and derivative strategies backed by rigorous regulatory compliance and 18+ years of market experience.</p>
+                <p>Data-driven technical analysis, equity research, and derivative strategies backed by rigorous regulatory compliance and 18+ years of market experience from Bengaluru, India.</p>
             </section>
 
+            <!-- Services Section -->
             <section id="services" class="section-block">
                 <h2 class="section-title">Research Services & Inquiries</h2>
                 <div class="services-grid">
@@ -590,10 +608,94 @@
                     <strong>SEBI F&O Study Warning:</strong> Over 90% of individual traders in equity futures and options segment incurred net losses. Cumulative trading losses of individual traders across FY22-FY24 exceeded ₹1.8 Lakh Crores.
                 </div>
             </section>
+
+            <!-- Investor Charter Section -->
+            <section id="charter" class="section-block">
+                <h2 class="section-title">Investor Charter for Research Analysts</h2>
+                <div class="compliance-card">
+                    <h3>Vision & Mission</h3>
+                    <p><strong>Vision:</strong> Empower investors with transparent, objective, and unbiased research reports to make informed financial decisions.</p>
+                    <p><strong>Mission:</strong> Provide high-quality fundamental and technical analysis adhering to strict ethical standards and regulatory compliance.</p>
+                    <h3>Details of Research Services Provided</h3>
+                    <ul>
+                        <li>Unbiased research reports covering equities, indices, and derivatives.</li>
+                        <li>Periodic updates and technical setups based on quantitative and qualitative parameters.</li>
+                        <li>Timely dissemination of research recommendations to all subscribed clients simultaneously.</li>
+                    </ul>
+                    <h3>Rights of Investors</h3>
+                    <ul>
+                        <li>To receive fair, honest, and independent research analysis.</li>
+                        <li>To be informed of any material conflicts of interest.</li>
+                        <li>To lodge grievances and have them resolved within prescribed timelines.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Grievance Redressal & Monthly Complaint Status Table -->
+            <section id="grievance" class="section-block">
+                <h2 class="section-title">Grievance Redressal & Complaint Status</h2>
+                <div class="compliance-card">
+                    <h3>Grievance Escalation Matrix</h3>
+                    <p>If you have any feedback or grievances regarding our research services, please follow the escalation matrix below:</p>
+                    <ul>
+                        <li><strong>Level 1 (Research Analyst / Compliance Officer):</strong> S Harish Chandan | Email: <a href="mailto:support@raharishchandan.com">support@raharishchandan.com</a> | Phone: +91 88944 66882. Response within 3 business days.</li>
+                        <li><strong>Level 2 (SEBI SCORES Portal):</strong> If the grievance is not resolved satisfactorily, you may lodge your complaint on the SEBI SCORES portal (<a href="https://scores.gov.in" target="_blank" rel="noopener">scores.gov.in</a>).</li>
+                        <li><strong>Level 3 (SMART ODR Portal):</strong> Dispute resolution through Online Dispute Resolution mechanism (<a href="https://smartodr.in" target="_blank" rel="noopener">smartodr.in</a>).</li>
+                    </ul>
+
+                    <h3 style="margin-top: 20px;">Investor Complaints Data (Mandatory Disclosure)</h3>
+                    <p>Data with respect to complaints received by Research Analyst on a monthly basis (SEBI Circular):</p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Month / Year</th>
+                                <th>Carried over from previous month</th>
+                                <th>Received</th>
+                                <th>Resolved</th>
+                                <th>Pending</th>
+                                <th>Pending &gt; 3 months</th>
+                                <th>Average Resolution Time (Days)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>July 2026</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>August 2026 (Current)</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Terms, Conditions & Refund Policy -->
+            <section id="terms" class="section-block">
+                <h2 class="section-title">Terms & Conditions / Refund Policy</h2>
+                <div class="compliance-card">
+                    <h3>Fee Payment Terms</h3>
+                    <p>All research service fees must be paid strictly via digital banking modes to our official designated fee account (UPI ID: <strong>harish.ra@validhdfc</strong>). Cash payments are strictly prohibited.</p>
+                    
+                    <h3 style="margin-top: 16px;">Strict No-Refund Policy</h3>
+                    <p>Due to the digital and intellectual nature of research reports, advisory notes, and technical analysis provided, <strong>all fees paid for research services are strictly non-refundable under any circumstances</strong>. Clients are advised to thoroughly review service scope, risk profiles, and sample reports before subscribing.</p>
+                </div>
+            </section>
         </div>
     </main>
 
-    <!-- Footer landmark containing all footer content and floating WhatsApp button -->
+    <!-- Footer & Floating WhatsApp Button -->
     <footer>
         <div class="footer-container">
             <div class="footer-col">
@@ -605,14 +707,14 @@
                 <p>Compliance Officer: S Harish Chandan<br>
                 Phone: +91 88944 66882<br>
                 Email: support@raharishchandan.com<br>
-                UPI ID: harish.ra@validhdfc</p>
+                Official UPI: harish.ra@validhdfc</p>
             </div>
         </div>
         <div class="footer-bottom">
             <p>&copy; 2026 S Harish Chandan. All rights reserved. | Designed in compliance with WCAG 2.2 & SEBI RA Regulations.</p>
         </div>
 
-        <!-- Floating WhatsApp button correctly nested inside footer landmark -->
+        <!-- Floating WhatsApp Button -->
         <a href="https://wa.me/918894466882?text=Hello%20RA%20S%20Harish%20Chandan,%20I%20have%20an%20inquiry%20regarding%20your%20services." class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contact on WhatsApp (Opens external application)">
             <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.198-.198.347-.764.966-.937 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
         </a>
