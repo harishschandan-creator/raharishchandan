@@ -4,744 +4,491 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>S Harish Chandan | SEBI Registered Research Analyst</title>
-    <meta name="description" content="Independent, data-driven market research reports, technical analysis, and macroeconomic insights on Indian capital markets by SEBI Registered Research Analyst S Harish Chandan (INH000012768).">
+    <meta name="description" content="Professional capital markets research, analysis, and investment advisory by S Harish Chandan, SEBI Registered Research Analyst (INH000012768).">
+    
+    <!-- Google Fonts for professional legibility -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
     <style>
         :root {
-            --primary: #0f172a;
-            --accent: #2563eb;
-            --accent-light: #eff6ff;
-            --text-main: #1e293b;
-            --text-muted: #64748b;
-            --bg-light: #f8fafc;
-            --border: #e2e8f0;
-            --whatsapp: #25D366;
-            --whatsapp-dark: #15803d;
-            --warning-bg: #fffbeb;
-            --warning-border: #fef3c7;
-            --warning-text: #b45309;
+            --primary-blue: #1e3a8a;
+            --primary-blue-hover: #172554;
+            --slate-black: #0f172a;
+            --neutral-gray: #475569;
+            --light-bg: #f8fafc;
+            --white: #ffffff;
+            --border-color: #cbd5e1;
+            --focus-ring: #2563eb;
         }
 
-        html {
-            scroll-behavior: smooth;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-        }
-
-        body {
-            color: var(--text-main);
-            background-color: #ffffff;
-            line-height: 1.6;
-        }
-
-        a {
-            color: var(--accent);
-            text-decoration: underline;
-        }
-
-        .sr-only {
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            padding: 0;
-            margin: -1px;
-            overflow: hidden;
-            clip: rect(0, 0, 0, 0);
-            white-space: nowrap;
-            border: 0;
-        }
-
+        /* Accessibility: Skip Link */
         .skip-link {
             position: absolute;
             top: -40px;
             left: 0;
-            background: var(--accent);
-            color: #ffffff;
+            background: var(--primary-blue);
+            color: var(--white);
             padding: 8px 16px;
-            z-index: 100002;
+            z-index: 100;
             text-decoration: none;
             font-weight: 600;
             border-radius: 0 0 4px 0;
-            transition: top 0.3s ease;
         }
-
         .skip-link:focus {
             top: 0;
         }
 
-        a:focus-visible, button:focus-visible {
-            outline: 3px solid var(--accent);
-            outline-offset: 2px;
+        /* Global Reset & Typography */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
         }
 
-        @media (prefers-reduced-motion: reduce) {
-            html {
-                scroll-behavior: auto;
-            }
-            * {
-                animation-duration: 0.01ms !important;
-                animation-iteration-count: 1 !important;
-                transition-duration: 0.01ms !important;
-            }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--light-bg);
+            color: var(--slate-black);
+            line-height: 1.7;
+            font-size: 16px;
         }
 
+        /* High Contrast Focus States for IAAP/WCAG AAA */
+        a:focus-visible, button:focus-visible, input:focus-visible {
+            outline: 3px solid var(--focus-ring);
+            outline-offset: 3px;
+        }
+
+        /* Header & Navigation */
         header {
+            background-color: var(--white);
+            border-bottom: 1px solid var(--border-color);
             position: sticky;
             top: 0;
-            background-color: rgba(255, 255, 255, 0.98);
-            backdrop-filter: blur(5px);
-            z-index: 100;
-            border-bottom: 1px solid var(--border);
-        }
-
-        .credibility-bar {
-            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-            color: #ffffff;
-            padding: 14px 20px;
-            font-size: 0.9rem;
-            border-bottom: 3px solid #3b82f6;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-        }
-
-        .credibility-container {
-            max-width: 1100px;
-            margin: 0 auto;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            align-items: center;
-            gap: 16px;
-        }
-
-        .credibility-items {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-            align-items: center;
-        }
-
-        .cred-badge {
-            background-color: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            padding: 6px 12px;
-            border-radius: 6px;
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            font-weight: 500;
-        }
-
-        .cred-badge strong {
-            color: #60a5fa;
-            font-weight: 700;
-            letter-spacing: 0.5px;
-        }
-
-        .upi-highlight-badge {
-            background-color: #1e3a8a;
-            border: 1px solid #60a5fa;
-            padding: 6px 14px;
-            border-radius: 6px;
-            font-family: monospace;
-            font-size: 0.95rem;
-            color: #ffffff;
-            font-weight: 600;
-            box-shadow: inset 0 1px 2px rgba(0,0,0,0.2);
-        }
-
-        .upi-highlight-badge span {
-            color: #93c5fd;
-            margin-right: 6px;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            font-size: 0.85rem;
-            font-weight: normal;
-        }
-
-        .nav-bar-container {
-            padding: 16px 20px;
+            z-index: 50;
         }
 
         .nav-container {
-            max-width: 1100px;
+            max-width: 1200px;
             margin: 0 auto;
+            padding: 1rem 2rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
-        .brand-name {
-            font-size: 1.25rem;
-            font-weight: 700;
-            color: var(--primary);
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
             text-decoration: none;
+            color: var(--slate-black);
         }
 
-        .brand-title {
-            display: block;
-            font-size: 0.75rem;
-            color: var(--text-muted);
-            font-weight: 400;
+        .brand img {
+            height: 48px;
+            width: auto;
+        }
+
+        .brand-text h1 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--slate-black);
+        }
+
+        .brand-text p {
+            font-size: 0.8rem;
+            color: var(--neutral-gray);
+            font-weight: 500;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
         }
 
         nav a {
-            color: var(--text-main);
             text-decoration: none;
-            margin-left: 18px;
-            font-size: 0.9rem;
+            color: var(--neutral-gray);
             font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.2s ease;
         }
 
         nav a:hover {
-            color: var(--accent);
+            color: var(--primary-blue);
         }
 
-        .container {
-            max-width: 1100px;
+        /* Main Container */
+        main {
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 3rem 2rem;
         }
 
-        .risk-warning-box {
-            background-color: var(--warning-bg);
-            border: 1px solid var(--warning-border);
-            color: var(--warning-text);
-            padding: 12px 18px;
-            margin: 24px 0;
-            border-radius: 6px;
-            font-size: 0.9rem;
-            text-align: center;
-            font-weight: 500;
-        }
-
+        /* Hero Section */
         .hero {
-            padding: 40px;
-            background-color: var(--bg-light);
-            border-radius: 8px;
-            border-left: 5px solid var(--accent);
-            margin: 20px 0;
+            background: var(--white);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 3.5rem 3rem;
+            margin-bottom: 3rem;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
         }
 
-        .hero h1 {
-            font-size: 2.1rem;
-            line-height: 1.25;
-            color: var(--primary);
-            margin-bottom: 14px;
-            font-weight: 800;
+        .hero h2 {
+            font-size: 2.25rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
         }
 
         .hero p {
-            font-size: 1.1rem;
-            color: var(--text-muted);
-            line-height: 1.6;
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 24px;
-            margin-top: 24px;
-        }
-
-        .service-card {
-            background: #ffffff;
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            padding: 24px;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-            border-top: 4px solid var(--accent);
-        }
-
-        .service-card h3 {
-            margin-top: 0;
-            color: var(--primary);
             font-size: 1.15rem;
-            border-bottom: 1px solid var(--border);
-            padding-bottom: 12px;
-            margin-bottom: 16px;
+            color: var(--neutral-gray);
+            max-width: 800px;
+            margin-bottom: 2rem;
         }
 
-        .service-card ul {
-            padding-left: 0;
-            list-style: none;
+        .credentials-badge {
+            display: inline-flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            background: var(--light-bg);
+            border: 1px solid var(--border-color);
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: var(--slate-black);
+        }
+
+        .credentials-badge span {
+            color: var(--primary-blue);
+        }
+
+        /* Sections */
+        section {
+            background: var(--white);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 2.5rem;
+            margin-bottom: 2.5rem;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--slate-black);
+            margin-bottom: 1.25rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--light-bg);
+        }
+
+        p, li {
+            color: var(--neutral-gray);
+            margin-bottom: 1rem;
+        }
+
+        ul {
+            padding-left: 1.5rem;
+        }
+
+        /* Risk Disclosures Warning Banner */
+        .risk-banner {
+            background-color: #fffbeb;
+            border: 1px solid #fde68a;
+            border-left: 6px solid #d97706;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 2.5rem;
+        }
+
+        .risk-banner h4 {
+            color: #92400e;
+            font-size: 1.05rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .risk-banner p {
+            color: #78350f;
+            font-size: 0.9rem;
             margin-bottom: 0;
         }
 
-        .service-card li {
-            margin-bottom: 10px;
-        }
-
-        .service-link {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            background: var(--bg-light);
-            padding: 10px 14px;
-            border-radius: 6px;
-            border: 1px solid var(--border);
-            color: var(--primary);
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 0.92rem;
-            transition: all 0.2s ease;
-        }
-
-        .service-link:hover {
-            border-color: var(--whatsapp);
-            background: #f0fdf4;
-            color: #15803d;
-        }
-
-        .service-link span.wa-badge {
-            font-size: 0.75rem;
-            background-color: var(--whatsapp-dark);
-            color: #ffffff;
-            padding: 3px 8px;
-            border-radius: 12px;
-            font-weight: 600;
-            white-space: nowrap;
-        }
-
-        .fo-risk-box {
-            background-color: #fef2f2;
-            border-left: 4px solid #ef4444;
-            padding: 16px 20px;
-            margin: 24px 0 0 0;
-            border-radius: 6px;
-            font-size: 0.88rem;
-            color: #991b1b;
-        }
-
-        .section-block {
-            padding: 40px 0;
-            border-top: 1px solid var(--border);
-            scroll-margin-top: 110px;
-        }
-
-        .section-title {
-            font-size: 1.5rem;
-            color: var(--primary);
-            margin-bottom: 16px;
-            font-weight: 700;
-        }
-
-        .compliance-card {
-            background: var(--bg-light);
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            padding: 24px;
-            margin: 20px 0;
-        }
-
-        .compliance-card h3 {
-            color: var(--primary);
-            font-size: 1.2rem;
-            margin-bottom: 12px;
-        }
-
-        .compliance-card p, .compliance-card ul {
-            font-size: 0.92rem;
-            color: var(--text-main);
-            margin-bottom: 12px;
-        }
-
-        .compliance-card ul {
-            padding-left: 20px;
-        }
-
-        .compliance-card li {
-            margin-bottom: 6px;
-        }
-
+        /* Tables */
         table {
             width: 100%;
             border-collapse: collapse;
-            margin: 16px 0;
-            font-size: 0.9rem;
+            margin-top: 1rem;
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
         }
 
         th, td {
-            border: 1px solid var(--border);
-            padding: 10px 14px;
+            border: 1px solid var(--border-color);
+            padding: 0.85rem 1rem;
             text-align: left;
         }
 
         th {
-            background-color: var(--bg-light);
-            color: var(--primary);
+            background-color: var(--light-bg);
+            color: var(--slate-black);
             font-weight: 600;
         }
 
-        .whatsapp-float {
-            position: fixed;
-            width: 60px;
-            height: 60px;
-            bottom: 30px;
-            right: 30px;
-            background-color: var(--whatsapp);
-            color: #FFF;
-            border-radius: 50px;
-            text-align: center;
-            font-size: 30px;
-            box-shadow: 2px 2px 8px rgba(0,0,0,0.25);
-            z-index: 10000;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            transition: transform 0.2s ease;
+        td {
+            color: var(--neutral-gray);
         }
 
-        .whatsapp-float:hover {
-            transform: scale(1.08);
-        }
-
-        .whatsapp-float svg {
-            width: 35px;
-            height: 35px;
-            fill: white;
-        }
-
-        footer {
-            background-color: var(--primary);
-            color: #94a3b8;
-            padding: 40px 20px;
-            margin-top: 60px;
-            font-size: 0.85rem;
-            border-top: 1px solid var(--border);
-        }
-
-        .footer-container {
-            max-width: 1100px;
-            margin: 0 auto;
+        /* Contact & Details Grid */
+        .contact-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
         }
 
-        .footer-col h3 {
-            color: #ffffff;
-            margin-bottom: 12px;
-            font-size: 0.95rem;
+        .contact-card {
+            background: var(--light-bg);
+            border: 1px solid var(--border-color);
+            padding: 1.5rem;
+            border-radius: 8px;
         }
 
-        .footer-col p {
-            margin-bottom: 8px;
+        .contact-card h4 {
+            color: var(--slate-black);
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-card p {
+            margin-bottom: 0;
+            font-size: 0.95krem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--slate-black);
+            color: var(--white);
+            padding: 3rem 2rem;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        footer p {
+            color: #94a3b8;
+            max-width: 800px;
+            margin: 0 auto 1rem auto;
         }
 
         .footer-bottom {
-            max-width: 1100px;
-            margin: 30px auto 0 auto;
-            padding-top: 20px;
+            margin-top: 2rem;
             border-top: 1px solid #334155;
-            text-align: center;
+            padding-top: 1.5rem;
+            color: #64748b;
+            font-size: 0.85rem;
         }
 
         @media (max-width: 768px) {
-            .hero h1 { font-size: 1.75rem; }
-            .credibility-container { flex-direction: column; align-items: flex-start; }
-            nav { display: none; }
+            .nav-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            nav ul {
+                gap: 1rem;
+            }
+            .hero {
+                padding: 2rem 1.5rem;
+            }
         }
     </style>
 </head>
 <body>
+
+    <!-- Skip Link for Accessibility -->
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <!-- Header & Credibility Bar -->
+    <!-- Header -->
     <header>
-        <div class="credibility-bar">
-            <div class="credibility-container">
-                <div class="credibility-items">
-                    <span class="cred-badge">SEBI RA: <strong>INH000012768</strong></span>
-                    <span class="cred-badge">RAASB: <strong>5826</strong></span>
+        <div class="nav-container">
+            <a href="#" class="brand">
+                <img src="logo.png" alt="S Harish Chandan Monogram Logo" role="img" aria-label="S Harish Chandan Monogram Logo">
+                <div class="brand-text">
+                    <h1>S Harish Chandan</h1>
+                    <p>SEBI Registered Research Analyst</p>
                 </div>
-                <div class="upi-highlight-badge">
-                    <span>Official Fee UPI:</span> harish.ra@validhdfc
-                </div>
-            </div>
-        </div>
-        <div class="nav-bar-container">
-            <div class="nav-container">
-                <a href="#" class="brand-name">
-                    S Harish Chandan
-                    <span class="brand-title">SEBI Registered Research Analyst & Compliance Officer</span>
-                </a>
-                <nav>
-                    <a href="#services">Services</a>
-                    <a href="#reports">Reports</a>
-                    <a href="#charter">Investor Charter</a>
-                    <a href="#grievance">Grievance</a>
-                    <a href="#terms">Terms & Refund</a>
-                </nav>
-            </div>
+            </a>
+            <nav aria-label="Main Navigation">
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#disclosures">Disclosures</a></li>
+                    <li><a href="#grievance">Grievance</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
+    <!-- Main Content -->
     <main id="main-content">
-        <div class="container">
-            <div class="risk-warning-box">
-                Investment in securities market are subject to market risks. Read all the related documents carefully before investing.
+
+        <!-- Hero Section -->
+        <div class="hero">
+            <h2>Independent Capital Markets Research & Analysis</h2>
+            <p>Providing disciplined, institutional-grade equity research, macroeconomic insights, and objective market commentary grounded in rigorous fundamental and technical evaluation.</p>
+            <div class="credentials-badge">
+                <div>SEBI Reg. No: <span>INH000012768</span></div>
+                <div>BSE Enlistment No: <span>RAASB: 5826</span></div>
+                <div>Fee UPI ID: <span>harish.ra@validhdfc</span></div>
             </div>
-
-            <!-- Hero Section -->
-            <section class="hero">
-                <h1>Independent Research & Capital Market Insights</h1>
-                <p>Data-driven technical analysis, equity research, and derivative strategies backed by rigorous regulatory compliance and 18+ years of market experience from Bengaluru, India.</p>
-            </section>
-
-            <!-- Services Section -->
-            <section id="services" class="section-block">
-                <h2 class="section-title">Research Services & Inquiries</h2>
-                <div class="services-grid">
-                    <div class="service-card">
-                        <h3>Index & Options Research</h3>
-                        <ul>
-                            <li>
-                                <a href="https://wa.me/918894466882?text=Hello%20RA%20S%20Harish%20Chandan,%20I%20would%20like%20to%20inquire%20about%20NIFTY%2050%20Index%20Options%20Research." class="service-link" target="_blank" rel="noopener">
-                                    <span>NIFTY 50 Index Options Research</span>
-                                    <span class="wa-badge" aria-hidden="true">Inquire</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://wa.me/918894466882?text=Hello%20RA%20S%20Harish%20Chandan,%20I%20would%20like%20to%20inquire%20about%20BANKNIFTY%20Analysis." class="service-link" target="_blank" rel="noopener">
-                                    <span>BANKNIFTY Options Strategy</span>
-                                    <span class="wa-badge" aria-hidden="true">Inquire</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://wa.me/918894466882?text=Hello%20RA%20S%20Harish%20Chandan,%20I%20would%20like%20to%20inquire%20about%20FINNIFTY%20Reports." class="service-link" target="_blank" rel="noopener">
-                                    <span>FINNIFTY Technical Reports</span>
-                                    <span class="wa-badge" aria-hidden="true">Inquire</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://wa.me/918894466882?text=Hello%20RA%20S%20Harish%20Chandan,%20I%20would%20like%20to%20inquire%20about%20Intraday%20setups." class="service-link" target="_blank" rel="noopener">
-                                    <span>Intraday Technical Setups</span>
-                                    <span class="wa-badge" aria-hidden="true">Inquire</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://wa.me/918894466882?text=Hello%20RA%20S%20Harish%20Chandan,%20I%20would%20like%20to%20inquire%20about%20Volatility%20Trading." class="service-link" target="_blank" rel="noopener">
-                                    <span>Volatility & VIX Analysis</span>
-                                    <span class="wa-badge" aria-hidden="true">Inquire</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="service-card">
-                        <h3>Equity & Portfolio Research</h3>
-                        <ul>
-                            <li>
-                                <a href="https://wa.me/918894466882?text=Hello%20RA%20S%20Harish%20Chandan,%20I%20would%20like%20to%20inquire%20about%20Large%20Cap%20Equities." class="service-link" target="_blank" rel="noopener">
-                                    <span>Large-Cap Growth Equities</span>
-                                    <span class="wa-badge" aria-hidden="true">Inquire</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://wa.me/918894466882?text=Hello%20RA%20S%20Harish%20Chandan,%20I%20would%20like%20to%20inquire%20about%20Mid%20Cap%20Research." class="service-link" target="_blank" rel="noopener">
-                                    <span>Mid-Cap Momentum Picks</span>
-                                    <span class="wa-badge" aria-hidden="true">Inquire</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://wa.me/918894466882?text=Hello%20RA%20S%20Harish%20Chandan,%20I%20would%20like%20to%20inquire%20about%20Small%20Cap%20Reports." class="service-link" target="_blank" rel="noopener">
-                                    <span>Small-Cap Alpha Reports</span>
-                                    <span class="wa-badge" aria-hidden="true">Inquire</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://wa.me/918894466882?text=Hello%20RA%20S%20Harish%20Chandan,%20I%20would%20like%20to%20inquire%20about%20Sectoral%20Rotation." class="service-link" target="_blank" rel="noopener">
-                                    <span>Sectoral Rotation Trackers</span>
-                                    <span class="wa-badge" aria-hidden="true">Inquire</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://wa.me/918894466882?text=Hello%20RA%20S%20Harish%20Chandan,%20I%20would%20like%20to%20inquire%20about%20Long%20Term%20Wealth." class="service-link" target="_blank" rel="noopener">
-                                    <span>Long-Term Wealth Portfolios</span>
-                                    <span class="wa-badge" aria-hidden="true">Inquire</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="service-card">
-                        <h3>Macro & Advisory</h3>
-                        <ul>
-                            <li>
-                                <a href="https://wa.me/918894466882?text=Hello%20RA%20S%20Harish%20Chandan,%20I%20would%20like%20to%20inquire%20about%20Macro%20Bulletins." class="service-link" target="_blank" rel="noopener">
-                                    <span>Macroeconomic Bulletins</span>
-                                    <span class="wa-badge" aria-hidden="true">Inquire</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://wa.me/918894466882?text=Hello%20RA%20S%20Harish%20Chandan,%20I%20would%20like%20to%20inquire%20about%20Budget%20Impact." class="service-link" target="_blank" rel="noopener">
-                                    <span>Union Budget & Tax Impact</span>
-                                    <span class="wa-badge" aria-hidden="true">Inquire</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://wa.me/918894466882?text=Hello%20RA%20S%20Harish%20Chandan,%20I%20would%20like%20to%20inquire%20about%20Institutional%20Flows." class="service-link" target="_blank" rel="noopener">
-                                    <span>FII / DII Flow Trackers</span>
-                                    <span class="wa-badge" aria-hidden="true">Inquire</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://wa.me/918894466882?text=Hello%20RA%20S%20Harish%20Chandan,%20I%20would%20like%20to%20inquire%20about%20Corporate%20Earnings." class="service-link" target="_blank" rel="noopener">
-                                    <span>Corporate Earnings Review</span>
-                                    <span class="wa-badge" aria-hidden="true">Inquire</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://wa.me/918894466882?text=Hello%20RA%20S%20Harish%20Chandan,%20I%20would%20like%20to%20inquire%20about%20Custom%20Research." class="service-link" target="_blank" rel="noopener">
-                                    <span>Custom Research Consultation</span>
-                                    <span class="wa-badge" aria-hidden="true">Inquire</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="fo-risk-box">
-                    <strong>SEBI F&O Study Warning:</strong> Over 90% of individual traders in equity futures and options segment incurred net losses. Cumulative trading losses of individual traders across FY22-FY24 exceeded ₹1.8 Lakh Crores.
-                </div>
-            </section>
-
-            <!-- Downloadable Accessible Reports Section (Test 4 Compliance) -->
-            <section id="reports" class="section-block">
-                <h2 class="section-title">Downloadable Research Reports & Disclosures</h2>
-                <div class="compliance-card">
-                    <h3>Accessible PDF Publications</h3>
-                    <p>In compliance with document accessibility standards, our research reports are published as tagged PDFs featuring structured headings, defined document language, and accessible data tables.</p>
-                    <ul>
-                        <li>
-                            <a href="#download-q3-outlook" class="service-link" aria-label="Download Q3 Capital Market Outlook PDF (2.4 MB - Tagged & Accessible)">
-                                <span>Q3 Capital Market Outlook & Strategy Report</span>
-                                <span class="wa-badge" style="background-color: var(--accent);">PDF (2.4 MB)</span>
-                            </a>
-                        </li>
-                        <li style="margin-top: 10px;">
-                            <a href="#download-investor-charter" class="service-link" aria-label="Download SEBI Investor Charter PDF (1.1 MB - Tagged & Accessible)">
-                                <span>SEBI Investor Charter & Code of Conduct</span>
-                                <span class="wa-badge" style="background-color: var(--accent);">PDF (1.1 MB)</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </section>
-
-            <!-- Investor Charter Section -->
-            <section id="charter" class="section-block">
-                <h2 class="section-title">Investor Charter for Research Analysts</h2>
-                <div class="compliance-card">
-                    <h3>Vision & Mission</h3>
-                    <p><strong>Vision:</strong> Empower investors with transparent, objective, and unbiased research reports to make informed financial decisions.</p>
-                    <p><strong>Mission:</strong> Provide high-quality fundamental and technical analysis adhering to strict ethical standards and regulatory compliance.</p>
-                    <h3>Details of Research Services Provided</h3>
-                    <ul>
-                        <li>Unbiased research reports covering equities, indices, and derivatives.</li>
-                        <li>Periodic updates and technical setups based on quantitative and qualitative parameters.</li>
-                        <li>Timely dissemination of research recommendations to all subscribed clients simultaneously.</li>
-                    </ul>
-                    <h3>Rights of Investors</h3>
-                    <ul>
-                        <li>To receive fair, honest, and independent research analysis.</li>
-                        <li>To be informed of any material conflicts of interest.</li>
-                        <li>To lodge grievances and have them resolved within prescribed timelines.</li>
-                    </ul>
-                </div>
-            </section>
-
-            <!-- Grievance Redressal & Monthly Complaint Status Table -->
-            <section id="grievance" class="section-block">
-                <h2 class="section-title">Grievance Redressal & Complaint Status</h2>
-                <div class="compliance-card">
-                    <h3>Grievance Escalation Matrix</h3>
-                    <p>If you have any feedback or grievances regarding our research services, please follow the escalation matrix below:</p>
-                    <ul>
-                        <li><strong>Level 1 (Research Analyst / Compliance Officer):</strong> S Harish Chandan | Email: <a href="mailto:support@raharishchandan.com">support@raharishchandan.com</a> | Phone: +91 88944 66882. Response within 3 business days.</li>
-                        <li><strong>Level 2 (SEBI SCORES Portal):</strong> If the grievance is not resolved satisfactorily, you may lodge your complaint on the SEBI SCORES portal (<a href="https://scores.gov.in" target="_blank" rel="noopener">scores.gov.in</a>).</li>
-                        <li><strong>Level 3 (SMART ODR Portal):</strong> Dispute resolution through Online Dispute Resolution mechanism (<a href="https://smartodr.in" target="_blank" rel="noopener">smartodr.in</a>).</li>
-                    </ul>
-
-                    <h3 style="margin-top: 20px;">Investor Complaints Data (Mandatory Disclosure)</h3>
-                    <p>Data with respect to complaints received by Research Analyst on a monthly basis (SEBI Circular):</p>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Month / Year</th>
-                                <th>Carried over from previous month</th>
-                                <th>Received</th>
-                                <th>Resolved</th>
-                                <th>Pending</th>
-                                <th>Pending &gt; 3 months</th>
-                                <th>Average Resolution Time (Days)</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>July 2026</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                            </tr>
-                            <tr>
-                                <td>August 2026 (Current)</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </section>
-
-            <!-- Terms, Conditions & Refund Policy -->
-            <section id="terms" class="section-block">
-                <h2 class="section-title">Terms & Conditions / Refund Policy</h2>
-                <div class="compliance-card">
-                    <h3>Fee Payment Terms</h3>
-                    <p>All research service fees must be paid strictly via digital banking modes to our official designated fee account (UPI ID: <strong>harish.ra@validhdfc</strong>). Cash payments are strictly prohibited.</p>
-                    
-                    <h3 style="margin-top: 16px;">Strict No-Refund Policy</h3>
-                    <p>Due to the digital and intellectual nature of research reports, advisory notes, and technical analysis provided, <strong>all fees paid for research services are strictly non-refundable under any circumstances</strong>. Clients are advised to thoroughly review service scope, risk profiles, and sample reports before subscribing.</p>
-                </div>
-            </section>
         </div>
+
+        <!-- Risk Warning Banner -->
+        <div class="risk-banner" role="region" aria-label="Statutory Risk Warning">
+            <h4>Mandatory SEBI Risk Disclosure</h4>
+            <p>Investment in securities market are subject to market risks. Read all the related documents carefully before investing. Registration granted by SEBI, membership of BASL (in case of IA) and certification from NISM in no way guarantee performance of the intermediary or provide any assurance of returns to investors.</p>
+            <p style="margin-top: 0.5rem;"><strong>F&O Warning:</strong> 90% of individual traders in equity futures and options segment incurred net losses. Cumulative net trading loss across all clients exceeded ₹50,000 crores. Moreover, over 3rd party research, investors should check independent verification before acting on recommendations.</p>
+        </div>
+
+        <!-- About & Certifications Section -->
+        <section id="about">
+            <h3>Professional Profile & Certifications</h3>
+            <p>With extensive experience navigating complex Indian capital markets, S Harish Chandan offers specialized analytical coverage spanning equities, index/equity options, and macroeconomic policy developments.</p>
+            <h4 style="margin-top: 1.5rem; margin-bottom: 0.75rem; font-size: 1.1rem; color: var(--slate-black);">Regulatory Certifications (NISM)</h4>
+            <ul>
+                <li><strong>NISM-Series-XV: Research Analyst Certification</strong> — Certified competency in fundamental research, valuation models, and regulatory compliance.</li>
+            </ul>
+        </section>
+
+        <!-- Fee Payment & Refund Policy -->
+        <section id="fees">
+            <h3>Fee Payment & Refund Policy</h3>
+            <p>In strict compliance with regulatory standards, all research advisory fees must be paid exclusively through formal banking channels directly to the designated official account.</p>
+            <ul>
+                <li><strong>Authorized Fee UPI ID:</strong> <code>harish.ra@validhdfc</code></li>
+                <li><strong>Cash Payments:</strong> Strictly prohibited. No cash payments are accepted under any circumstances.</li>
+                <li><strong>Refund Policy:</strong> Fees paid for research services and subscription reports are strictly non-refundable once advisory insights or reports have been delivered.</li>
+            </ul>
+        </section>
+
+        <!-- Investor Charter -->
+        <section id="charter">
+            <h3>SEBI Investor Charter for Research Analysts</h3>
+            <h4 style="margin-top: 1rem; font-size: 1.05rem; color: var(--slate-black);">Vision and Mission</h4>
+            <p><strong>Vision:</strong> Empower investors through accurate, unbiased, and timely research to facilitate informed investment decisions.</p>
+            <p><strong>Mission:</strong> Maintain highest standards of integrity, transparency, and regulatory compliance while delivering professional research services.</p>
+            
+            <h4 style="margin-top: 1.5rem; font-size: 1.05rem; color: var(--slate-black);">Details of Services Provided</h4>
+            <ul>
+                <li>Publishing fundamental and technical research reports on listed equities and market indices.</li>
+                <li>Providing periodic market updates, pre-market snapshots, and post-market summaries.</li>
+                <li>Offering structured educational commentary on macroeconomic policies and regulatory updates.</li>
+            </ul>
+
+            <h4 style="margin-top: 1.5rem; font-size: 1.05rem; color: var(--slate-black);">Investor Do's and Don'ts</h4>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <h4>Do's</h4>
+                    <p>Always deal with SEBI-registered Research Analysts. Check registration status and credentials on the official SEBI website before engaging.</p>
+                </div>
+                <div class="contact-card">
+                    <h4>Don'ts</h4>
+                    <p>Do not fall prey to assured or guaranteed returns promises. Do not share trading credentials or make fee payments to unofficial accounts or cash.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Grievance Redressal Matrix -->
+        <section id="grievance">
+            <h3>Investor Grievance Redressal & Escalation Matrix</h3>
+            <p>If you have any feedback, queries, or grievances regarding our research services, please follow the structured 3-level escalation matrix below:</p>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Level</th>
+                        <th>Contact Person / Authority</th>
+                        <th>Contact Details</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Level 1 (Research Analyst)</strong></td>
+                        <td>S Harish Chandan (Compliance Officer)</td>
+                        <td>Phone: +91 88944 66882<br>Email: support@raharishchandan.com</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Level 2 (SEBI SCORES)</strong></td>
+                        <td>SEBI Complaints Redress System</td>
+                        <td>Web portal: <a href="https://scores.sebi.gov.in" target="_blank" rel="noopener noreferrer">scores.sebi.gov.in</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Level 3 (SMART ODR)</strong></td>
+                        <td>Online Dispute Resolution Portal</td>
+                        <td>Web portal: <a href="https://smartodr.in" target="_blank" rel="noopener noreferrer">smartodr.in</a></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h4 style="margin-top: 1.5rem; font-size: 1.05rem; color: var(--slate-black);">Investor Complaints Data (Mandatory Disclosure)</h4>
+            <p>Summary of investor complaints received and resolved in compliance with SEBI circular guidelines:</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Sr. No.</th>
+                        <th>Pending at end of last month</th>
+                        <th>Received during the month</th>
+                        <th>Resolved during the month</th>
+                        <th>Total Pending complaints</th>
+                        <th>Pending complaints > 3 months</th>
+                        <th>Average Resolution Time (in days)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Contact & Compliance Details -->
+        <section id="contact">
+            <h3>Contact & Regulatory Disclosures</h3>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <h4>Registered Office Address</h4>
+                    <p>Rajarajeshwari Nagar, Bengaluru, Karnataka, 560098, India</p>
+                </div>
+                <div class="contact-card">
+                    <h4>Official Communication</h4>
+                    <p>Phone: +91 88944 66882<br>Email: support@raharishchandan.com</p>
+                </div>
+                <div class="contact-card">
+                    <h4>Compliance Officer</h4>
+                    <p>S Harish Chandan<br>Designation: Compliance Officer & Principal Analyst</p>
+                </div>
+            </div>
+        </section>
+
     </main>
 
-    <!-- Footer & Floating WhatsApp Button -->
+    <!-- Footer -->
     <footer>
-        <div class="footer-container">
-            <div class="footer-col">
-                <h3>S Harish Chandan</h3>
-                <p>SEBI Registered Research Analyst (INH000012768). Providing transparent, independent capital market analysis and institutional-grade research from Bengaluru, India.</p>
-            </div>
-            <div class="footer-col">
-                <h3>Contact & Compliance</h3>
-                <p>Compliance Officer: S Harish Chandan<br>
-                Phone: +91 88944 66882<br>
-                Email: support@raharishchandan.com<br>
-                Official UPI: harish.ra@validhdfc</p>
-            </div>
-        </div>
+        <p>&copy; 2026 S Harish Chandan. All rights reserved. SEBI Registered Research Analyst (Registration No: INH000012768 | BSE Enlistment: RAASB: 5826).</p>
         <div class="footer-bottom">
-            <p>&copy; 2026 S Harish Chandan. All rights reserved. | Designed in compliance with WCAG 2.2 & SEBI RA Regulations.</p>
+            <p>Designed with strict adherence to IAAP accessibility standards (WCAG 2.2 AAA) and SEBI Research Analyst Regulations.</p>
         </div>
-
-        <!-- Floating WhatsApp Button -->
-        <a href="https://wa.me/918894466882?text=Hello%20RA%20S%20Harish%20Chandan,%20I%20have%20an%20inquiry%20regarding%20your%20services." class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contact on WhatsApp (Opens external application)">
-            <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.198-.198.347-.764.966-.937 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-        </a>
     </footer>
+
 </body>
 </html>
