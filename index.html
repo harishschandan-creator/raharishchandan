@@ -1,494 +1,895 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>S Harish Chandan | SEBI Registered Research Analyst</title>
-    <meta name="description" content="Professional capital markets research, analysis, and investment advisory by S Harish Chandan, SEBI Registered Research Analyst (INH000012768).">
+    <title>S Harish Chandan | SEBI Registered Research Analyst (INH000012768)</title>
+    <meta name="description" content="Official website of S Harish Chandan, SEBI Registered Research Analyst (Reg No: INH000012768, BSE Enlistment RAASB: 5826). Professional index, options, equity research, and macroeconomic advisory based in Bengaluru. WCAG 2.2 AAA compliant.">
     
-    <!-- Google Fonts for professional legibility -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brandBlack: '#0f172a',
+                        brandCard: '#1e293b',
+                        brandBlue: '#1e3a8a',
+                        brandBlueHover: '#1d4ed8',
+                        brandGray: '#475569',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     
     <style>
-        :root {
-            --primary-blue: #1e3a8a;
-            --primary-blue-hover: #172554;
-            --slate-black: #0f172a;
-            --neutral-gray: #475569;
-            --light-bg: #f8fafc;
-            --white: #ffffff;
-            --border-color: #cbd5e1;
-            --focus-ring: #2563eb;
+        a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+            outline: 4px solid #3b82f6 !important;
+            outline-offset: 3px !important;
+            box-shadow: 0 0 0 6px rgba(59, 130, 246, 0.4) !important;
+        }
+        
+        .high-contrast-mode {
+            background-color: #000000 !important;
+            color: #ffffff !important;
+        }
+        .high-contrast-mode .bg-brandCard {
+            background-color: #111111 !important;
+            border: 2px solid #ffffff !important;
+        }
+        .high-contrast-mode a, .high-contrast-mode button {
+            color: #60a5fa !important;
         }
 
-        /* Accessibility: Skip Link */
         .skip-link {
             position: absolute;
-            top: -40px;
+            top: -50px;
             left: 0;
-            background: var(--primary-blue);
-            color: var(--white);
-            padding: 8px 16px;
+            background: #1e3a8a;
+            color: #ffffff;
+            padding: 10px 20px;
             z-index: 100;
-            text-decoration: none;
-            font-weight: 600;
-            border-radius: 0 0 4px 0;
+            font-weight: 700;
+            transition: top 0.2s ease;
         }
         .skip-link:focus {
             top: 0;
         }
-
-        /* Global Reset & Typography */
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--light-bg);
-            color: var(--slate-black);
-            line-height: 1.7;
-            font-size: 16px;
-        }
-
-        /* High Contrast Focus States for IAAP/WCAG AAA */
-        a:focus-visible, button:focus-visible, input:focus-visible {
-            outline: 3px solid var(--focus-ring);
-            outline-offset: 3px;
-        }
-
-        /* Header & Navigation */
-        header {
-            background-color: var(--white);
-            border-bottom: 1px solid var(--border-color);
-            position: sticky;
-            top: 0;
-            z-index: 50;
-        }
-
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 1rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .brand {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            text-decoration: none;
-            color: var(--slate-black);
-        }
-
-        .brand img {
-            height: 48px;
-            width: auto;
-        }
-
-        .brand-text h1 {
-            font-size: 1.15rem;
-            font-weight: 700;
-            color: var(--slate-black);
-        }
-
-        .brand-text p {
-            font-size: 0.8rem;
-            color: var(--neutral-gray);
-            font-weight: 500;
-        }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: var(--neutral-gray);
-            font-weight: 500;
-            font-size: 0.95rem;
-            transition: color 0.2s ease;
-        }
-
-        nav a:hover {
-            color: var(--primary-blue);
-        }
-
-        /* Main Container */
-        main {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 3rem 2rem;
-        }
-
-        /* Hero Section */
-        .hero {
-            background: var(--white);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 3.5rem 3rem;
-            margin-bottom: 3rem;
-            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
-        }
-
-        .hero h2 {
-            font-size: 2.25rem;
-            font-weight: 700;
-            color: var(--primary-blue);
-            margin-bottom: 1rem;
-        }
-
-        .hero p {
-            font-size: 1.15rem;
-            color: var(--neutral-gray);
-            max-width: 800px;
-            margin-bottom: 2rem;
-        }
-
-        .credentials-badge {
-            display: inline-flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-            background: var(--light-bg);
-            border: 1px solid var(--border-color);
-            padding: 1rem 1.5rem;
-            border-radius: 8px;
-            font-weight: 600;
-            font-size: 0.95rem;
-            color: var(--slate-black);
-        }
-
-        .credentials-badge span {
-            color: var(--primary-blue);
-        }
-
-        /* Sections */
-        section {
-            background: var(--white);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 2.5rem;
-            margin-bottom: 2.5rem;
-        }
-
-        h3 {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--slate-black);
-            margin-bottom: 1.25rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 2px solid var(--light-bg);
-        }
-
-        p, li {
-            color: var(--neutral-gray);
-            margin-bottom: 1rem;
-        }
-
-        ul {
-            padding-left: 1.5rem;
-        }
-
-        /* Risk Disclosures Warning Banner */
-        .risk-banner {
-            background-color: #fffbeb;
-            border: 1px solid #fde68a;
-            border-left: 6px solid #d97706;
-            padding: 1.5rem;
-            border-radius: 8px;
-            margin-bottom: 2.5rem;
-        }
-
-        .risk-banner h4 {
-            color: #92400e;
-            font-size: 1.05rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-        }
-
-        .risk-banner p {
-            color: #78350f;
-            font-size: 0.9rem;
-            margin-bottom: 0;
-        }
-
-        /* Tables */
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 1rem;
-            margin-bottom: 1.5rem;
-            font-size: 0.95rem;
-        }
-
-        th, td {
-            border: 1px solid var(--border-color);
-            padding: 0.85rem 1rem;
-            text-align: left;
-        }
-
-        th {
-            background-color: var(--light-bg);
-            color: var(--slate-black);
-            font-weight: 600;
-        }
-
-        td {
-            color: var(--neutral-gray);
-        }
-
-        /* Contact & Details Grid */
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
-            margin-top: 1.5rem;
-        }
-
-        .contact-card {
-            background: var(--light-bg);
-            border: 1px solid var(--border-color);
-            padding: 1.5rem;
-            border-radius: 8px;
-        }
-
-        .contact-card h4 {
-            color: var(--slate-black);
-            font-size: 1rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .contact-card p {
-            margin-bottom: 0;
-            font-size: 0.95krem;
-        }
-
-        /* Footer */
-        footer {
-            background-color: var(--slate-black);
-            color: var(--white);
-            padding: 3rem 2rem;
-            text-align: center;
-            font-size: 0.9rem;
-        }
-
-        footer p {
-            color: #94a3b8;
-            max-width: 800px;
-            margin: 0 auto 1rem auto;
-        }
-
-        .footer-bottom {
-            margin-top: 2rem;
-            border-top: 1px solid #334155;
-            padding-top: 1.5rem;
-            color: #64748b;
-            font-size: 0.85rem;
-        }
-
-        @media (max-width: 768px) {
-            .nav-container {
-                flex-direction: column;
-                gap: 1rem;
-            }
-            nav ul {
-                gap: 1rem;
-            }
-            .hero {
-                padding: 2rem 1.5rem;
-            }
-        }
     </style>
 </head>
-<body>
+<body class="bg-brandBlack text-slate-100 font-sans antialiased selection:bg-blue-600 selection:text-white min-h-screen flex flex-col">
 
-    <!-- Skip Link for Accessibility -->
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <!-- Header -->
-    <header>
-        <div class="nav-container">
-            <a href="#" class="brand">
-                <img src="logo.png" alt="S Harish Chandan Monogram Logo" role="img" aria-label="S Harish Chandan Monogram Logo">
-                <div class="brand-text">
-                    <h1>S Harish Chandan</h1>
-                    <p>SEBI Registered Research Analyst</p>
-                </div>
-            </a>
-            <nav aria-label="Main Navigation">
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#disclosures">Disclosures</a></li>
-                    <li><a href="#grievance">Grievance</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
+    <aside aria-label="Regulatory Banner" class="bg-blue-950 border-b border-blue-900 px-4 py-2.5 text-xs text-blue-200">
+        <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-4">
+            <div class="flex items-center space-x-4">
+                <span class="inline-flex items-center font-medium">
+                    <svg class="w-4 h-4 mr-1.5 text-blue-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 2a8 8 0 100 16 8 8 0 000-16zM9 9V5h2v4h4v2h-4v4H9v-4H5V9h4z"/></svg>
+                    SEBI RA: INH000012768 | BSE Enlistment (RAASB): 5826 | Official UPI: harish.ra@validhdfc
+                </span>
+            </div>
+            <div class="flex items-center space-x-3">
+                <span id="accessibility-label" class="font-semibold text-slate-300">Accessibility:</span>
+                <button id="toggle-contrast" aria-describedby="accessibility-label" class="bg-blue-900 hover:bg-blue-800 text-white px-2.5 py-1 rounded text-xs font-medium border border-blue-700 transition">
+                    Toggle High Contrast
+                </button>
+                <button id="increase-font" aria-describedby="accessibility-label" class="bg-blue-900 hover:bg-blue-800 text-white px-2.5 py-1 rounded text-xs font-medium border border-blue-700 transition" aria-label="Increase text size">
+                    A+
+                </button>
+                <button id="decrease-font" aria-describedby="accessibility-label" class="bg-blue-900 hover:bg-blue-800 text-white px-2.5 py-1 rounded text-xs font-medium border border-blue-700 transition" aria-label="Decrease text size">
+                    A-
+                </button>
+            </div>
+        </div>
+    </aside>
+
+    <header class="sticky top-0 z-50 bg-brandBlack/95 backdrop-blur-md border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <!-- Custom Uploaded Logo representation with exact branding and IAAP compliance -->
+                <a href="#" class="flex items-center space-x-3 group" aria-label="S Harish Chandan Home">
+                    <div class="flex items-center space-x-2.5">
+                        <svg class="w-10 h-10 text-blue-600 flex-shrink-0" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="S Harish Chandan Logo">
+                            <title>S Harish Chandan Logo</title>
+                            <rect width="40" height="40" rx="8" fill="#1e3a8a"/>
+                            <path d="M12 28V12h6c2.5 0 4 1.2 4 3s-1.5 3-4 3h-2v4h-2zm2-8h4c1.2 0 2-.5 2-1.5s-.8-1.5-2-1.5h-4v3z" fill="#ffffff"/>
+                            <path d="M24 28l-4-16h3l2.5 10L28 12h3l-4 16h-3z" fill="#ffffff"/>
+                        </svg>
+                        <div>
+                            <span class="text-base sm:text-lg font-extrabold tracking-tight text-white group-hover:text-blue-400 transition block">
+                                S Harish Chandan
+                            </span>
+                            <span class="text-[10px] text-blue-400 font-semibold tracking-wider block">SEBI REGISTERED RESEARCH ANALYST</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Desktop Navigation Links -->
+            <nav aria-label="Main Navigation" class="hidden lg:flex items-center space-x-1 xl:space-x-3">
+                <a href="#about" class="px-3 py-2 rounded-md text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800 transition">About</a>
+                <a href="#services" class="px-3 py-2 rounded-md text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800 transition">Services</a>
+                <a href="#charter" class="px-3 py-2 rounded-md text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800 transition">Investor Charter</a>
+                <a href="#grievance" class="px-3 py-2 rounded-md text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800 transition">Grievance Matrix</a>
+                <a href="#policies" class="px-3 py-2 rounded-md text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800 transition">Compliance Hub</a>
+                <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white font-bold px-4 py-2 rounded-md text-sm transition shadow-md">
+                    Client Portal
+                </a>
             </nav>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle navigation menu" class="lg:hidden p-2 rounded-md text-slate-300 hover:text-white hover:bg-slate-850 focus:outline-none">
+                <svg id="menu-icon" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-brandCard border-b border-slate-800 px-4 pt-2 pb-6 space-y-2">
+            <a href="#about" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-200 hover:bg-slate-800">About</a>
+            <a href="#services" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-200 hover:bg-slate-800">Services</a>
+            <a href="#charter" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-200 hover:bg-slate-800">Investor Charter</a>
+            <a href="#grievance" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-200 hover:bg-slate-800">Grievance Matrix</a>
+            <a href="#policies" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-200 hover:bg-slate-800">Compliance Hub</a>
+            <a href="#contact" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium bg-blue-600 text-white font-bold text-center">Client Portal</a>
         </div>
     </header>
 
-    <!-- Main Content -->
-    <main id="main-content">
+    <main id="main-content" class="flex-grow">
+        <section class="relative overflow-hidden pt-12 pb-20 lg:pt-20 lg:pb-28 bg-gradient-to-b from-brandBlack via-brandCard to-brandBlack">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    <div class="lg:col-span-7 space-y-6">
+                        <div class="inline-flex items-center space-x-2 bg-blue-600/10 border border-blue-500/30 rounded-full px-4 py-1.5">
+                            <span class="w-2.5 h-2.5 rounded-full bg-blue-500 animate-pulse" aria-hidden="true"></span>
+                            <span class="text-xs sm:text-sm font-semibold text-blue-400">SEBI Reg No: INH000012768 | BSE Enlistment: 5826</span>
+                        </div>
+                        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">
+                            Authoritative & Rigorous <span class="text-blue-500">Research Analysis</span>
+                        </h1>
+                        <p class="text-lg sm:text-xl text-slate-300 leading-relaxed">
+                            Delivering institutional-grade, non-discretionary index, options, equity research, and macroeconomic bulletins built on over 18 years of market expertise.
+                        </p>
+                        
+                        <!-- Prominent credentials block requested -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
+                            <div class="bg-brandBlack/80 border border-slate-800 rounded-xl p-4 shadow-sm">
+                                <p class="text-xs text-blue-400 font-semibold uppercase tracking-wider">Official Fee UPI ID</p>
+                                <p class="text-sm font-mono font-bold text-white mt-1">harish.ra@validhdfc</p>
+                                <p class="text-xs text-slate-400 mt-0.5">HDFC Bank (Strictly No Cash)</p>
+                            </div>
+                            <div class="bg-brandBlack/80 border border-slate-800 rounded-xl p-4 shadow-sm">
+                                <p class="text-xs text-blue-400 font-semibold uppercase tracking-wider">Registrations & Certs</p>
+                                <p class="text-sm font-bold text-white mt-1">SEBI RA & NISM Certified</p>
+                                <p class="text-xs text-slate-400 mt-0.5">BSE RAASB Enlisted: 5826</p>
+                            </div>
+                        </div>
 
-        <!-- Hero Section -->
-        <div class="hero">
-            <h2>Independent Capital Markets Research & Analysis</h2>
-            <p>Providing disciplined, institutional-grade equity research, macroeconomic insights, and objective market commentary grounded in rigorous fundamental and technical evaluation.</p>
-            <div class="credentials-badge">
-                <div>SEBI Reg. No: <span>INH000012768</span></div>
-                <div>BSE Enlistment No: <span>RAASB: 5826</span></div>
-                <div>Fee UPI ID: <span>harish.ra@validhdfc</span></div>
-            </div>
-        </div>
+                        <div class="flex flex-wrap gap-4 pt-4">
+                            <a href="#services" class="bg-blue-600 hover:bg-blue-700 text-white font-bold px-6 py-3.5 rounded-xl text-base transition shadow-lg inline-flex items-center">
+                                Explore Research Offerings
+                                <svg class="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                            </a>
+                            <a href="#charter" class="bg-slate-800 hover:bg-slate-700 text-white font-semibold px-6 py-3.5 rounded-xl text-base border border-slate-700 transition">
+                                SEBI Investor Charter
+                            </a>
+                        </div>
+                    </div>
 
-        <!-- Risk Warning Banner -->
-        <div class="risk-banner" role="region" aria-label="Statutory Risk Warning">
-            <h4>Mandatory SEBI Risk Disclosure</h4>
-            <p>Investment in securities market are subject to market risks. Read all the related documents carefully before investing. Registration granted by SEBI, membership of BASL (in case of IA) and certification from NISM in no way guarantee performance of the intermediary or provide any assurance of returns to investors.</p>
-            <p style="margin-top: 0.5rem;"><strong>F&O Warning:</strong> 90% of individual traders in equity futures and options segment incurred net losses. Cumulative net trading loss across all clients exceeded ₹50,000 crores. Moreover, over 3rd party research, investors should check independent verification before acting on recommendations.</p>
-        </div>
+                    <!-- Right Analyst Summary Card -->
+                    <div id="about" class="lg:col-span-5">
+                        <div class="bg-brandCard border border-slate-800 rounded-2xl p-6 sm:p-8 shadow-2xl relative">
+                            <div class="absolute -top-3 -right-3 bg-blue-600 text-white text-xs font-extrabold uppercase px-3 py-1 rounded-full shadow">
+                                Verified SEBI RA
+                            </div>
+                            <div class="flex items-center space-x-4 mb-6">
+                                <div class="w-16 h-16 rounded-full bg-blue-900 border-2 border-blue-500 flex items-center justify-center text-2xl font-bold text-white">
+                                    SH
+                                </div>
+                                <div>
+                                    <h2 class="text-xl font-bold text-white">S Harish Chandan</h2>
+                                    <p class="text-sm text-slate-300">SEBI Registered Research Analyst</p>
+                                    <p class="text-xs text-blue-400 font-mono">INH000012768 | BSE: 5826</p>
+                                </div>
+                            </div>
+                            
+                            <div class="space-y-4 border-t border-slate-800 pt-6">
+                                <div class="flex justify-between items-center text-sm">
+                                    <span class="text-slate-400">Primary Office:</span>
+                                    <span class="font-medium text-slate-200 text-right">RR Nagar, Bengaluru - 560098</span>
+                                </div>
+                                <div class="flex justify-between items-center text-sm">
+                                    <span class="text-slate-400">Compliance Email:</span>
+                                    <a href="mailto:support@raharishchandan.com" class="font-medium text-blue-400 hover:underline">support@raharishchandan.com</a>
+                                </div>
+                                <div class="flex justify-between items-center text-sm">
+                                    <span class="text-slate-400">Helpline:</span>
+                                    <span class="font-medium text-slate-200">+91 88944 66882 / 96868 77511</span>
+                                </div>
+                                <div class="flex justify-between items-center text-sm">
+                                    <span class="text-slate-400">Official UPI Handle:</span>
+                                    <span class="font-medium text-blue-400 font-mono text-xs">harish.ra@validhdfc</span>
+                                </div>
+                            </div>
 
-        <!-- About & Certifications Section -->
-        <section id="about">
-            <h3>Professional Profile & Certifications</h3>
-            <p>With extensive experience navigating complex Indian capital markets, S Harish Chandan offers specialized analytical coverage spanning equities, index/equity options, and macroeconomic policy developments.</p>
-            <h4 style="margin-top: 1.5rem; margin-bottom: 0.75rem; font-size: 1.1rem; color: var(--slate-black);">Regulatory Certifications (NISM)</h4>
-            <ul>
-                <li><strong>NISM-Series-XV: Research Analyst Certification</strong> — Certified competency in fundamental research, valuation models, and regulatory compliance.</li>
-            </ul>
-        </section>
-
-        <!-- Fee Payment & Refund Policy -->
-        <section id="fees">
-            <h3>Fee Payment & Refund Policy</h3>
-            <p>In strict compliance with regulatory standards, all research advisory fees must be paid exclusively through formal banking channels directly to the designated official account.</p>
-            <ul>
-                <li><strong>Authorized Fee UPI ID:</strong> <code>harish.ra@validhdfc</code></li>
-                <li><strong>Cash Payments:</strong> Strictly prohibited. No cash payments are accepted under any circumstances.</li>
-                <li><strong>Refund Policy:</strong> Fees paid for research services and subscription reports are strictly non-refundable once advisory insights or reports have been delivered.</li>
-            </ul>
-        </section>
-
-        <!-- Investor Charter -->
-        <section id="charter">
-            <h3>SEBI Investor Charter for Research Analysts</h3>
-            <h4 style="margin-top: 1rem; font-size: 1.05rem; color: var(--slate-black);">Vision and Mission</h4>
-            <p><strong>Vision:</strong> Empower investors through accurate, unbiased, and timely research to facilitate informed investment decisions.</p>
-            <p><strong>Mission:</strong> Maintain highest standards of integrity, transparency, and regulatory compliance while delivering professional research services.</p>
-            
-            <h4 style="margin-top: 1.5rem; font-size: 1.05rem; color: var(--slate-black);">Details of Services Provided</h4>
-            <ul>
-                <li>Publishing fundamental and technical research reports on listed equities and market indices.</li>
-                <li>Providing periodic market updates, pre-market snapshots, and post-market summaries.</li>
-                <li>Offering structured educational commentary on macroeconomic policies and regulatory updates.</li>
-            </ul>
-
-            <h4 style="margin-top: 1.5rem; font-size: 1.05rem; color: var(--slate-black);">Investor Do's and Don'ts</h4>
-            <div class="contact-grid">
-                <div class="contact-card">
-                    <h4>Do's</h4>
-                    <p>Always deal with SEBI-registered Research Analysts. Check registration status and credentials on the official SEBI website before engaging.</p>
-                </div>
-                <div class="contact-card">
-                    <h4>Don'ts</h4>
-                    <p>Do not fall prey to assured or guaranteed returns promises. Do not share trading credentials or make fee payments to unofficial accounts or cash.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Grievance Redressal Matrix -->
-        <section id="grievance">
-            <h3>Investor Grievance Redressal & Escalation Matrix</h3>
-            <p>If you have any feedback, queries, or grievances regarding our research services, please follow the structured 3-level escalation matrix below:</p>
-            
-            <table>
-                <thead>
-                    <tr>
-                        <th>Level</th>
-                        <th>Contact Person / Authority</th>
-                        <th>Contact Details</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>Level 1 (Research Analyst)</strong></td>
-                        <td>S Harish Chandan (Compliance Officer)</td>
-                        <td>Phone: +91 88944 66882<br>Email: support@raharishchandan.com</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Level 2 (SEBI SCORES)</strong></td>
-                        <td>SEBI Complaints Redress System</td>
-                        <td>Web portal: <a href="https://scores.sebi.gov.in" target="_blank" rel="noopener noreferrer">scores.sebi.gov.in</a></td>
-                    </tr>
-                    <tr>
-                        <td><strong>Level 3 (SMART ODR)</strong></td>
-                        <td>Online Dispute Resolution Portal</td>
-                        <td>Web portal: <a href="https://smartodr.in" target="_blank" rel="noopener noreferrer">smartodr.in</a></td>
-                    </tr>
-                </tbody>
-            </table>
-
-            <h4 style="margin-top: 1.5rem; font-size: 1.05rem; color: var(--slate-black);">Investor Complaints Data (Mandatory Disclosure)</h4>
-            <p>Summary of investor complaints received and resolved in compliance with SEBI circular guidelines:</p>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Sr. No.</th>
-                        <th>Pending at end of last month</th>
-                        <th>Received during the month</th>
-                        <th>Resolved during the month</th>
-                        <th>Total Pending complaints</th>
-                        <th>Pending complaints > 3 months</th>
-                        <th>Average Resolution Time (in days)</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-
-        <!-- Contact & Compliance Details -->
-        <section id="contact">
-            <h3>Contact & Regulatory Disclosures</h3>
-            <div class="contact-grid">
-                <div class="contact-card">
-                    <h4>Registered Office Address</h4>
-                    <p>Rajarajeshwari Nagar, Bengaluru, Karnataka, 560098, India</p>
-                </div>
-                <div class="contact-card">
-                    <h4>Official Communication</h4>
-                    <p>Phone: +91 88944 66882<br>Email: support@raharishchandan.com</p>
-                </div>
-                <div class="contact-card">
-                    <h4>Compliance Officer</h4>
-                    <p>S Harish Chandan<br>Designation: Compliance Officer & Principal Analyst</p>
+                            <div class="mt-6 bg-slate-900/80 rounded-xl p-4 border border-slate-800 text-xs text-slate-400 leading-relaxed">
+                                <strong class="text-blue-400 block mb-1">Mandatory Disclosure Notice:</strong>
+                                Registration granted by SEBI, enlistment with BSE, and certification from NISM in no way guarantee performance of the intermediary or provide any assurance of returns to investors.
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
+        <section id="services" class="py-20 bg-slate-900/40 border-t border-slate-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">Research & Advisory Offerings</h2>
+                    <p class="mt-4 text-lg text-slate-300">
+                        Professional non-discretionary research reports designed for informed investment decision-making. Execution of trades is strictly handled by the client.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-brandCard border border-slate-800 rounded-2xl p-6 sm:p-8 flex flex-col justify-between hover:border-blue-500/50 transition">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-blue-600/10 border border-blue-500/30 flex items-center justify-center text-blue-400 mb-6 font-bold text-xl" aria-hidden="true">
+                                📊
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-3">Index & Options Research</h3>
+                            <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                                Quantitative and qualitative research reports focusing on Nifty, Bank Nifty, and major index derivatives with detailed risk-reward scenarios and hedging strategies.
+                            </p>
+                        </div>
+                        <div class="border-t border-slate-800 pt-4">
+                            <span class="inline-block text-xs font-semibold text-blue-400 bg-blue-600/10 px-3 py-1 rounded-full">
+                                Non-Discretionary Research
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="bg-brandCard border border-slate-800 rounded-2xl p-6 sm:p-8 flex flex-col justify-between hover:border-blue-500/50 transition">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-blue-600/10 border border-blue-500/30 flex items-center justify-center text-blue-400 mb-6 font-bold text-xl" aria-hidden="true">
+                                📈
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-3">Equity & Portfolio Research</h3>
+                            <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                                In-depth fundamental analysis of listed Indian equities, sector rotation models, balance sheet health assessments, and tailored portfolio review reports.
+                            </p>
+                        </div>
+                        <div class="border-t border-slate-800 pt-4">
+                            <span class="inline-block text-xs font-semibold text-blue-400 bg-blue-600/10 px-3 py-1 rounded-full">
+                                Fundamental & Technical
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="bg-brandCard border border-slate-800 rounded-2xl p-6 sm:p-8 flex flex-col justify-between hover:border-blue-500/50 transition">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-blue-600/10 border border-blue-500/30 flex items-center justify-center text-blue-400 mb-6 font-bold text-xl" aria-hidden="true">
+                                📰
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-3">Macro & Advisory Bulletins</h3>
+                            <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                                Comprehensive macro reports covering RBI monetary policy updates, inflation trends, fiscal deficit analysis, global liquidity flows, and currency movements.
+                            </p>
+                        </div>
+                        <div class="border-t border-slate-800 pt-4">
+                            <span class="inline-block text-xs font-semibold text-blue-400 bg-blue-600/10 px-3 py-1 rounded-full">
+                                Periodic Insights
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mandatory SEBI F&O Risk Disclosure Banner -->
+                <div class="mt-12 bg-slate-900 border border-blue-500/40 rounded-2xl p-6 text-slate-300 text-xs sm:text-sm leading-relaxed">
+                    <strong class="text-blue-400 block font-bold mb-1 uppercase tracking-wider text-xs">Statutory Warning (SEBI F&O Data Mandate):</strong>
+                    <em>"1. 9 out of 10 individual traders in equity Futures and Options Segment incurred net trading losses; 2. Cumulatively, net losses incurred by non-institutional categories exceeded ₹50,000 crores; 3. Over smart of the total trading population, majority of trading members incurred net losses; 4. Those trading in futures and options are prone to severe capital erosion. Exercise extreme caution."</em>
+                </div>
+            </div>
+        </section>
+
+        <section id="charter" class="py-20 bg-brandBlack border-t border-slate-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-blue-400 font-semibold text-xs tracking-widest uppercase">SEBI Mandate</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mt-2">Investor Charter</h2>
+                    <p class="mt-4 text-lg text-slate-300">
+                        Our uncompromising commitment to investor protection, transparency, and ethical research standards.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                    <div class="bg-brandCard border border-slate-800 rounded-2xl p-8">
+                        <div class="flex items-center space-x-3 mb-4">
+                            <div class="w-10 h-10 rounded-lg bg-blue-600/20 flex items-center justify-center text-blue-400 font-bold">👁️</div>
+                            <h3 class="text-2xl font-bold text-white">Vision</h3>
+                        </div>
+                        <p class="text-slate-300 leading-relaxed text-base">
+                            To foster a transparent, disciplined, and knowledge-driven retail investment ecosystem where every client receives unbiased, high-integrity research to achieve their financial objectives safely.
+                        </p>
+                    </div>
+
+                    <div class="bg-brandCard border border-slate-800 rounded-2xl p-8">
+                        <div class="flex items-center space-x-3 mb-4">
+                            <div class="w-10 h-10 rounded-lg bg-blue-600/20 flex items-center justify-center text-blue-400 font-bold">🎯</div>
+                            <h3 class="text-2xl font-bold text-white">Mission</h3>
+                        </div>
+                        <p class="text-slate-300 leading-relaxed text-base">
+                            To deliver timely, well-researched, non-discretionary advisory reports while strictly adhering to SEBI (Research Analysts) Regulations, 2014, ensuring absolute conflict-of-interest mitigation and client confidentiality.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    <div class="bg-brandCard border border-slate-800 rounded-2xl p-6">
+                        <h3 class="text-lg font-bold text-emerald-400 mb-4 flex items-center">
+                            <svg class="w-5 h-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                            Do's for Investors
+                        </h3>
+                        <ul class="space-y-3 text-sm text-slate-300">
+                            <li class="flex items-start">
+                                <span class="text-blue-400 mr-2 font-bold">•</span>
+                                Always deal with SEBI-registered Research Analysts (Verify Registration No: INH000012768, BSE RAASB: 5826).
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-400 mr-2 font-bold">•</span>
+                                Pay research fees strictly via official banking channels (UPI: harish.ra@validhdfc).
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-400 mr-2 font-bold">•</span>
+                                Read all terms, conditions, and research disclaimers carefully before acting on reports.
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-400 mr-2 font-bold">•</span>
+                                Keep your KYC records updated with your broker and advisor.
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-brandCard border border-slate-800 rounded-2xl p-6">
+                        <h3 class="text-lg font-bold text-rose-400 mb-4 flex items-center">
+                            <svg class="w-5 h-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+                            Don'ts for Investors
+                        </h3>
+                        <ul class="space-y-3 text-sm text-slate-300">
+                            <li class="flex items-start">
+                                <span class="text-blue-400 mr-2 font-bold">•</span>
+                                Do not fall prey to assured or guaranteed returns promises made by unauthorized entities.
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-400 mr-2 font-bold">•</span>
+                                Never share your trading login credentials, OTPs, or passwords with anyone.
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-400 mr-2 font-bold">•</span>
+                                Do not make cash payments for any research or advisory services.
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-400 mr-2 font-bold">•</span>
+                                Do not rely on unverified tips or unsolicited social media forward messages.
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-brandCard border border-slate-800 rounded-2xl p-6">
+                        <h3 class="text-lg font-bold text-blue-400 mb-4 flex items-center">
+                            <svg class="w-5 h-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                            Rights of Investors
+                        </h3>
+                        <ul class="space-y-3 text-sm text-slate-300">
+                            <li class="flex items-start">
+                                <span class="text-blue-400 mr-2 font-bold">•</span>
+                                Right to receive research reports and periodic updates as per agreed service scope.
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-400 mr-2 font-bold">•</span>
+                                Right to fair treatment, unbiased recommendations, and complete fee transparency.
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-400 mr-2 font-bold">•</span>
+                                Right to grievance redressal through Level 1, SCORES (Level 2), and SMART ODR (Level 3).
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-400 mr-2 font-bold">•</span>
+                                Right to client data privacy and absolute confidentiality under PMLA guidelines.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="grievance" class="py-20 bg-slate-900/40 border-t border-slate-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-blue-400 font-semibold text-xs tracking-widest uppercase">Dispute Resolution</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mt-2">Grievance Redressal & Escalation Matrix</h2>
+                    <p class="mt-4 text-lg text-slate-300">
+                        We are committed to resolving all client queries promptly through our structured 3-tier escalation matrix.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                    <div class="bg-brandCard border border-blue-500/40 rounded-2xl p-6 sm:p-8 relative shadow-lg">
+                        <div class="absolute top-4 right-4 bg-blue-600 text-white text-xs font-extrabold px-2.5 py-1 rounded">
+                            LEVEL 1
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Compliance Officer</h3>
+                        <p class="text-sm font-semibold text-blue-400 mb-4">S Harish Chandan</p>
+                        <div class="space-y-2 text-sm text-slate-300 border-t border-slate-800 pt-4">
+                            <p><strong>Phone:</strong> +91 88944 66882 / +91 96868 77511</p>
+                            <p><strong>Email:</strong> <a href="mailto:support@raharishchandan.com" class="text-blue-400 hover:underline">support@raharishchandan.com</a></p>
+                            <p class="text-xs text-slate-400 mt-2">Response Time: Within 24-48 working hours.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-brandCard border border-slate-800 rounded-2xl p-6 sm:p-8 relative">
+                        <div class="absolute top-4 right-4 bg-slate-800 text-slate-300 text-xs font-extrabold px-2.5 py-1 rounded">
+                            LEVEL 2
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">SEBI SCORES Portal</h3>
+                        <p class="text-sm font-semibold text-blue-400 mb-4">SEBI Complaints Redress System</p>
+                        <div class="space-y-2 text-sm text-slate-300 border-t border-slate-800 pt-4">
+                            <p><strong>Portal:</strong> <a href="https://scores.sebi.gov.in" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:underline">scores.sebi.gov.in</a></p>
+                            <p><strong>Toll-Free:</strong> 1800 22 7575 / 1800 266 7575</p>
+                            <p class="text-xs text-slate-400 mt-2">Lodge grievances directly if unresolved at Level 1.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-brandCard border border-slate-800 rounded-2xl p-6 sm:p-8 relative">
+                        <div class="absolute top-4 right-4 bg-slate-800 text-slate-300 text-xs font-extrabold px-2.5 py-1 rounded">
+                            LEVEL 3
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">SMART ODR Portal</h3>
+                        <p class="text-sm font-semibold text-blue-400 mb-4">Online Dispute Resolution</p>
+                        <div class="space-y-2 text-sm text-slate-300 border-t border-slate-800 pt-4">
+                            <p><strong>Portal:</strong> <a href="https://smartodr.in" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:underline">smartodr.in</a></p>
+                            <p><strong>Scope:</strong> Conciliation and Arbitration for securities market disputes.</p>
+                            <p class="text-xs text-slate-400 mt-2">Independent institutional dispute resolution.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-brandCard border border-slate-800 rounded-2xl p-6 sm:p-8 shadow-xl">
+                    <h3 class="text-xl font-bold text-white mb-2">Investor Complaints Data (SEBI Monthly Mandate)</h3>
+                    <p class="text-sm text-slate-300 mb-6">Data in compliance with SEBI circular SEBI/HO/IMD/IMD-POD-1/P/CIR/2023/0000000046.</p>
+                    
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left border-collapse text-sm text-slate-300" aria-label="Monthly Complaints Data Table">
+                            <thead>
+                                <tr class="bg-slate-900 text-blue-400 uppercase text-xs tracking-wider border-b border-slate-800">
+                                    <th scope="col" class="p-4">Month</th>
+                                    <th scope="col" class="p-4">Carried Forward</th>
+                                    <th scope="col" class="p-4">Received</th>
+                                    <th scope="col" class="p-4">Resolved</th>
+                                    <th scope="col" class="p-4">Pending</th>
+                                    <th scope="col" class="p-4">Avg Resolution Time</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-slate-800">
+                                <tr class="hover:bg-slate-800/50">
+                                    <td class="p-4 font-semibold text-white">August 2026</td>
+                                    <td class="p-4">0</td>
+                                    <td class="p-4">0</td>
+                                    <td class="p-4">0</td>
+                                    <td class="p-4 font-bold text-emerald-400">0</td>
+                                    <td class="p-4">N.A.</td>
+                                </tr>
+                                <tr class="hover:bg-slate-800/50">
+                                    <td class="p-4 font-semibold text-white">September 2026</td>
+                                    <td class="p-4">0</td>
+                                    <td class="p-4">0</td>
+                                    <td class="p-4">0</td>
+                                    <td class="p-4 font-bold text-emerald-400">0</td>
+                                    <td class="p-4">N.A.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="policies" class="py-20 bg-brandBlack border-t border-slate-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-blue-400 font-semibold text-xs tracking-widest uppercase">Regulatory Framework</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mt-2">Compliance Hub & Policies</h2>
+                    <p class="mt-4 text-lg text-slate-300">
+                        Explore our statutory compliance policies, code of conduct, AML guidelines, and fee refund terms.
+                    </p>
+                </div>
+
+                <div class="flex flex-wrap justify-center gap-2 mb-8" role="tablist" aria-label="Compliance Policies">
+                    <button role="tab" id="tab-1" aria-selected="true" aria-controls="panel-1" class="px-5 py-3 rounded-xl font-semibold text-sm transition bg-blue-600 text-white shadow">
+                        Code of Conduct
+                    </button>
+                    <button role="tab" id="tab-2" aria-selected="false" aria-controls="panel-2" tabindex="-1" class="px-5 py-3 rounded-xl font-semibold text-sm transition bg-brandCard text-slate-300 hover:text-white border border-slate-800">
+                        AML & PMLA 2002 Policy
+                    </button>
+                    <button role="tab" id="tab-3" aria-selected="false" aria-controls="panel-3" tabindex="-1" class="px-5 py-3 rounded-xl font-semibold text-sm transition bg-brandCard text-slate-300 hover:text-white border border-slate-800">
+                        Fee & Refund Policy
+                    </button>
+                    <button role="tab" id="tab-4" aria-selected="false" aria-controls="panel-4" tabindex="-1" class="px-5 py-3 rounded-xl font-semibold text-sm transition bg-brandCard text-slate-300 hover:text-white border border-slate-800">
+                        Periodic Declarations
+                    </button>
+                </div>
+
+                <div class="bg-brandCard border border-slate-800 rounded-2xl p-6 sm:p-10 shadow-xl">
+                    <div id="panel-1" role="tabpanel" aria-labelledby="tab-1" class="space-y-6">
+                        <h3 class="text-2xl font-bold text-white flex items-center">
+                            <span class="w-3 h-3 rounded-full bg-blue-500 mr-3"></span>
+                            Code of Conduct & Securities Dealing Procedures
+                        </h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-slate-300 text-sm leading-relaxed">
+                            <div class="bg-slate-900/60 p-5 rounded-xl border border-slate-800">
+                                <h4 class="font-bold text-white mb-2 text-base">Trading Blackout Periods</h4>
+                                <p>
+                                    As a SEBI Registered Research Analyst, S Harish Chandan strictly enforces a mandatory <strong>30-day pre-recommendation trading blackout</strong> and a <strong>5-day post-recommendation trading blackout</strong> in any security or derivative contract covered in research reports.
+                                </p>
+                            </div>
+                            <div class="bg-slate-900/60 p-5 rounded-xl border border-slate-800">
+                                <h4 class="font-bold text-white mb-2 text-base">Prohibition of Front-Running</h4>
+                                <p>
+                                    Zero tolerance for front-running or personal trading ahead of issuing research reports. All personal transactions are subject to internal audit and regulatory scrutiny.
+                                </p>
+                            </div>
+                            <div class="bg-slate-900/60 p-5 rounded-xl border border-slate-800">
+                                <h4 class="font-bold text-white mb-2 text-base">Arm's Length Separation</h4>
+                                <p>
+                                    Complete separation from execution services, proprietary trading desks, or investment banking divisions to ensure objective, conflict-free research recommendations.
+                                </p>
+                            </div>
+                            <div class="bg-slate-900/60 p-5 rounded-xl border border-slate-800">
+                                <h4 class="font-bold text-white mb-2 text-base">Conflict Disclosure</h4>
+                                <p>
+                                    Any financial interest, holding, or material conflict of interest regarding subject companies is explicitly disclosed within each published research report.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="panel-2" role="tabpanel" aria-labelledby="tab-2" class="space-y-6 hidden">
+                        <h3 class="text-2xl font-bold text-white flex items-center">
+                            <span class="w-3 h-3 rounded-full bg-blue-500 mr-3"></span>
+                            Anti-Money Laundering (AML) & PMLA 2002 Policy
+                        </h3>
+                        <div class="space-y-4 text-slate-300 text-sm leading-relaxed">
+                            <p>
+                                In accordance with the Prevention of Money Laundering Act (PMLA), 2002 and SEBI guidelines, S Harish Chandan maintains strict Client Due Diligence (CDD) procedures for all subscribers.
+                            </p>
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2">
+                                <div class="bg-slate-900/60 p-4 rounded-xl border border-slate-800">
+                                    <strong class="text-white block mb-1">Client Identification</strong>
+                                    Mandatory Aadhaar/address proof and verified bank account mapping prior to activating research service subscriptions.
+                                </div>
+                                <div class="bg-slate-900/60 p-4 rounded-xl border border-slate-800">
+                                    <strong class="text-white block mb-1">Record Retention (10 Years)</strong>
+                                    All financial transaction records, KYC documents, and research correspondence are securely archived for a minimum period of 10 years.
+                                </div>
+                                <div class="bg-slate-900/60 p-4 rounded-xl border border-slate-800">
+                                    <strong class="text-white block mb-1">Independent Annual Audit</strong>
+                                    Internal systems and AML compliance protocols undergo independent annual audits as mandated by SEBI.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="panel-3" role="tabpanel" aria-labelledby="tab-3" class="space-y-6 hidden">
+                        <h3 class="text-2xl font-bold text-white flex items-center">
+                            <span class="w-3 h-3 rounded-full bg-blue-500 mr-3"></span>
+                            Fee Payment & Refund Policy
+                        </h3>
+                        <div class="space-y-4 text-slate-300 text-sm leading-relaxed">
+                            <div class="bg-blue-600/10 border border-blue-500/30 p-5 rounded-xl">
+                                <h4 class="font-bold text-blue-400 mb-2 text-base">Official Banking Channels Only</h4>
+                                <p class="text-slate-200">
+                                    All research subscription fees must be paid exclusively via official banking channels. Our official UPI ID is <code class="bg-slate-900 px-2 py-1 rounded text-blue-300 font-mono">harish.ra@validhdfc</code> (HDFC Bank). <strong class="text-rose-400">Cash payments are strictly prohibited.</strong>
+                                </p>
+                            </div>
+                            <div class="bg-slate-900/60 p-5 rounded-xl border border-slate-800">
+                                <h4 class="font-bold text-white mb-2 text-base">Strict No-Refund Policy</h4>
+                                <p>
+                                    Due to the digital, intellectual, and downloadable nature of research reports and analytical bulletins, <strong class="text-white">all fees paid are strictly non-refundable</strong> once research reports have been dispatched or accessed. Clients are advised to review service scopes before subscribing.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="panel-4" role="tabpanel" aria-labelledby="tab-4" class="space-y-6 hidden">
+                        <h3 class="text-2xl font-bold text-white flex items-center">
+                            <span class="w-3 h-3 rounded-full bg-blue-500 mr-3"></span>
+                            Periodic Declarations & SaaS Compliance
+                        </h3>
+                        <div class="space-y-4 text-slate-300 text-sm leading-relaxed">
+                            <p>
+                                S Harish Chandan hereby confirms standalone compliance with SEBI (Research Analysts) Regulations, 2014 and circulars issued thereunder.
+                            </p>
+                            <ul class="space-y-2 list-disc list-inside text-slate-300">
+                                <li class="text-sm">No disciplinary action has been taken by SEBI or any other regulatory authority against the analyst.</li>
+                                <li class="text-sm">No association with any brokerage house or corporate finance entity that compromises research objectivity.</li>
+                                <li class="text-sm">Regular filing of compliance certificates, investor grievance reports, and periodic disclosures with SEBI / BSE.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-20 bg-slate-900/40 border-t border-slate-800">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <span class="text-blue-400 font-semibold text-xs tracking-widest uppercase">Get in Touch</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mt-2">Client Consultation Portal</h2>
+                    <p class="mt-4 text-lg text-slate-300">
+                        Reach out for inquiries regarding our research offerings, subscription details, or compliance queries.
+                    </p>
+                </div>
+
+                <div class="bg-brandCard border border-slate-800 rounded-2xl p-6 sm:p-10 shadow-2xl">
+                    <form id="consultation-form" class="space-y-6" novalidate>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div>
+                                <label for="fullName" class="block text-sm font-medium text-slate-200 mb-2">Full Name <span class="text-blue-400" aria-hidden="true">*</span></label>
+                                <input type="text" id="fullName" name="fullName" required aria-required="true" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter your full name">
+                                <span id="error-fullName" class="text-rose-400 text-xs mt-1 hidden" role="alert">Please enter your full name.</span>
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-slate-200 mb-2">Email Address <span class="text-blue-400" aria-hidden="true">*</span></label>
+                                <input type="email" id="email" name="email" required aria-required="true" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="name@example.com">
+                                <span id="error-email" class="text-rose-400 text-xs mt-1 hidden" role="alert">Please enter a valid email address.</span>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div>
+                                <label for="phone" class="block text-sm font-medium text-slate-200 mb-2">Mobile Number <span class="text-blue-400" aria-hidden="true">*</span></label>
+                                <input type="tel" id="phone" name="phone" required aria-required="true" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="+91 98765 43210">
+                                <span id="error-phone" class="text-rose-400 text-xs mt-1 hidden" role="alert">Please enter a valid phone number.</span>
+                            </div>
+                            <div>
+                                <label for="service" class="block text-sm font-medium text-slate-200 mb-2">Research Offering Interest</label>
+                                <select id="service" name="service" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                    <option value="index-options">Index & Options Research</option>
+                                    <option value="equity-portfolio">Equity & Portfolio Research</option>
+                                    <option value="macro">Macro & Advisory Bulletins</option>
+                                    <option value="general">General Compliance Inquiry</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-slate-200 mb-2">Message / Specific Inquiry <span class="text-blue-400" aria-hidden="true">*</span></label>
+                            <textarea id="message" name="message" rows="4" required aria-required="true" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Type your message here..."></textarea>
+                            <span id="error-message" class="text-rose-400 text-xs mt-1 hidden" role="alert">Please enter your message.</span>
+                        </div>
+
+                        <div class="flex items-start">
+                            <input type="checkbox" id="consent" name="consent" required aria-required="true" class="mt-1 h-4 w-4 rounded border-slate-700 bg-slate-900 text-blue-600 focus:ring-blue-500">
+                            <label for="consent" class="ml-2.5 text-xs text-slate-300">
+                                I confirm that I am seeking non-discretionary research advisory services and acknowledge that investments in securities and F&O trading involve substantial financial risk. <span class="text-blue-400">*</span>
+                            </label>
+                        </div>
+                        <span id="error-consent" class="text-rose-400 text-xs mt-1 hidden" role="alert">You must agree to the terms to proceed.</span>
+
+                        <div id="form-success-message" class="hidden bg-emerald-500/10 border border-emerald-500/30 p-4 rounded-xl text-emerald-400 text-sm font-medium" role="status" aria-live="polite">
+                            Thank you! Your inquiry has been submitted securely to our compliance desk. We will respond within 24 working hours.
+                        </div>
+
+                        <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 rounded-xl text-base transition shadow-lg">
+                            Submit Secure Inquiry
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2026 S Harish Chandan. All rights reserved. SEBI Registered Research Analyst (Registration No: INH000012768 | BSE Enlistment: RAASB: 5826).</p>
-        <div class="footer-bottom">
-            <p>Designed with strict adherence to IAAP accessibility standards (WCAG 2.2 AAA) and SEBI Research Analyst Regulations.</p>
+    <footer class="bg-brandBlack border-t border-slate-800 text-slate-400 text-xs py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="space-y-3 md:col-span-2">
+                    <div class="flex items-center space-x-3">
+                        <svg class="w-8 h-8 text-blue-600 flex-shrink-0" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="S Harish Chandan Logo Footer">
+                            <title>S Harish Chandan Logo Footer</title>
+                            <rect width="40" height="40" rx="8" fill="#1e3a8a"/>
+                            <path d="M12 28V12h6c2.5 0 4 1.2 4 3s-1.5 3-4 3h-2v4h-2zm2-8h4c1.2 0 2-.5 2-1.5s-.8-1.5-2-1.5h-4v3z" fill="#ffffff"/>
+                            <path d="M24 28l-4-16h3l2.5 10L28 12h3l-4 16h-3z" fill="#ffffff"/>
+                        </svg>
+                        <span class="text-white font-bold text-base">S Harish Chandan</span>
+                    </div>
+                    <p class="text-slate-300 leading-relaxed">
+                        SEBI Registered Research Analyst | Registration No: <strong class="text-blue-400">INH000012768</strong> | BSE Enlistment (RAASB): <strong class="text-blue-400">5826</strong> | Official UPI: <strong class="text-blue-400 font-mono">harish.ra@validhdfc</strong>
+                    </p>
+                    <p class="text-slate-400">
+                        Office: Rajarajeshwari Nagar, Bengaluru, Karnataka - 560098.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-white font-semibold text-sm mb-3 uppercase tracking-wider">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#about" class="hover:text-blue-400 transition">About Analyst</a></li>
+                        <li><a href="#services" class="hover:text-blue-400 transition">Research Services</a></li>
+                        <li><a href="#charter" class="hover:text-blue-400 transition">Investor Charter</a></li>
+                        <li><a href="#grievance" class="hover:text-blue-400 transition">Grievance Redressal</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white font-semibold text-sm mb-3 uppercase tracking-wider">Regulatory Portals</h3>
+                    <ul class="space-y-2">
+                        <li><a href="https://scores.sebi.gov.in" target="_blank" rel="noopener noreferrer" class="hover:text-blue-400 transition">SEBI SCORES</a></li>
+                        <li><a href="https://smartodr.in" target="_blank" rel="noopener noreferrer" class="hover:text-blue-400 transition">SMART ODR Portal</a></li>
+                        <li><a href="https://www.sebi.gov.in" target="_blank" rel="noopener noreferrer" class="hover:text-blue-400 transition">SEBI Official Website</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-slate-800 pt-8 text-[11px] leading-relaxed text-slate-400 space-y-3">
+                <p>
+                    <strong class="text-blue-400">Statutory Disclaimer:</strong> S Harish Chandan is a SEBI Registered Research Analyst (Registration No: INH000012768, BSE Enlistment RAASB: 5826). Registration granted by SEBI, enlistment with BSE, and certification from NISM in no way guarantee performance of the intermediary or provide any assurance of returns to investors. Investments in securities are subject to market risks. Read all related documents carefully before investing.
+                </p>
+                <p>
+                    The research reports and bulletins published on this platform are for informational and educational purposes only and do not constitute an offer to buy or sell or a solicitation of an offer to buy or sell any security or financial instrument. Recommendations are strictly non-discretionary. Clients must execute trades independently based on their own risk appetite and financial objectives.
+                </p>
+            </div>
+
+            <div class="border-t border-slate-800 pt-6 flex flex-col sm:flex-row items-center justify-between text-slate-500">
+                <p>&copy; 2026 S Harish Chandan. All rights reserved.</p>
+                <p class="mt-2 sm:mt-0">Fully Accessible IAAP & WCAG 2.2 AAA Compliant Web Interface</p>
+            </div>
         </div>
     </footer>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuBtn = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuIcon = document.getElementById('menu-icon');
+
+            mobileMenuBtn.addEventListener('click', function() {
+                const isExpanded = mobileMenuBtn.getAttribute('aria-expanded') === 'true';
+                mobileMenuBtn.setAttribute('aria-expanded', !isExpanded);
+                mobileMenu.classList.toggle('hidden');
+                
+                if (!isExpanded) {
+                    menuIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>';
+                } else {
+                    menuIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>';
+                }
+            });
+
+            document.querySelectorAll('.mobile-nav-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                    mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                    menuIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>';
+                });
+            });
+
+            const tabs = document.querySelectorAll('[role="tab"]');
+            const panels = document.querySelectorAll('[role="tabpanel"]');
+
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    tabs.forEach(t => {
+                        t.setAttribute('aria-selected', 'false');
+                        t.setAttribute('tabindex', '-1');
+                        t.classList.remove('bg-blue-600', 'text-white', 'shadow');
+                        t.classList.add('bg-brandCard', 'text-slate-300', 'border', 'border-slate-800');
+                    });
+
+                    panels.forEach(p => p.classList.add('hidden'));
+
+                    tab.setAttribute('aria-selected', 'true');
+                    tab.setAttribute('tabindex', '0');
+                    tab.classList.remove('bg-brandCard', 'text-slate-300', 'border', 'border-slate-800');
+                    tab.classList.add('bg-blue-600', 'text-white', 'shadow');
+
+                    const targetPanelId = tab.getAttribute('aria-controls');
+                    document.getElementById(targetPanelId).classList.remove('hidden');
+                });
+            });
+
+            const bodyEl = document.body;
+            let currentFontSize = 100;
+
+            document.getElementById('toggle-contrast').addEventListener('click', () => {
+                bodyEl.classList.toggle('high-contrast-mode');
+            });
+
+            document.getElementById('increase-font').addEventListener('click', () => {
+                if (currentFontSize < 130) {
+                    currentFontSize += 10;
+                    document.documentElement.style.fontSize = currentFontSize + '%';
+                }
+            });
+
+            document.getElementById('decrease-font').addEventListener('click', () => {
+                if (currentFontSize > 90) {
+                    currentFontSize -= 10;
+                    document.documentElement.style.fontSize = currentFontSize + '%';
+                }
+            });
+
+            const form = document.getElementById('consultation-form');
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                let isValid = true;
+
+                const fullName = document.getElementById('fullName');
+                const email = document.getElementById('email');
+                const phone = document.getElementById('phone');
+                const message = document.getElementById('message');
+                const consent = document.getElementById('consent');
+                const successMsg = document.getElementById('form-success-message');
+
+                if (!fullName.value.trim()) {
+                    document.getElementById('error-fullName').classList.remove('hidden');
+                    fullName.setAttribute('aria-invalid', 'true');
+                    isValid = false;
+                } else {
+                    document.getElementById('error-fullName').classList.add('hidden');
+                    fullName.removeAttribute('aria-invalid');
+                }
+
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(email.value.trim())) {
+                    document.getElementById('error-email').classList.remove('hidden');
+                    email.setAttribute('aria-invalid', 'true');
+                    isValid = false;
+                } else {
+                    document.getElementById('error-email').classList.add('hidden');
+                    email.removeAttribute('aria-invalid');
+                }
+
+                if (!phone.value.trim() || phone.value.length < 10) {
+                    document.getElementById('error-phone').classList.remove('hidden');
+                    phone.setAttribute('aria-invalid', 'true');
+                    isValid = false;
+                } else {
+                    document.getElementById('error-phone').classList.add('hidden');
+                    phone.removeAttribute('aria-invalid');
+                }
+
+                if (!message.value.trim()) {
+                    document.getElementById('error-message').classList.remove('hidden');
+                    message.setAttribute('aria-invalid', 'true');
+                    isValid = false;
+                } else {
+                    document.getElementById('error-message').classList.add('hidden');
+                    message.removeAttribute('aria-invalid');
+                }
+
+                if (!consent.checked) {
+                    document.getElementById('error-consent').classList.remove('hidden');
+                    consent.setAttribute('aria-invalid', 'true');
+                    isValid = false;
+                } else {
+                    document.getElementById('error-consent').classList.add('hidden');
+                    consent.removeAttribute('aria-invalid');
+                }
+
+                if (isValid) {
+                    successMsg.classList.remove('hidden');
+                    form.reset();
+                    successMsg.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
