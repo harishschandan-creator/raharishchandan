@@ -41,9 +41,11 @@
             background-color: #000000 !important;
             color: #ffffff !important;
         }
-        .high-contrast-mode .bg-brandCard {
+        .high-contrast-mode .bg-brandCard,
+        .high-contrast-mode header,
+        .high-contrast-mode footer {
             background-color: #111111 !important;
-            border: 2px solid #ffffff !important;
+            border-color: #ffffff !important;
         }
         .high-contrast-mode a, .high-contrast-mode button {
             color: #60a5fa !important;
@@ -67,35 +69,37 @@
 </head>
 <body class="bg-brandBlack text-slate-100 font-sans antialiased selection:bg-blue-600 selection:text-white min-h-screen flex flex-col">
 
+    <!-- Skip Link for Accessibility -->
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
+    <!-- Regulatory & Accessibility Top Bar -->
     <aside aria-label="Regulatory Banner" class="bg-blue-950 border-b border-blue-900 px-4 py-2.5 text-xs text-blue-200">
         <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-4">
             <div class="flex items-center space-x-4">
                 <span class="inline-flex items-center font-medium">
-                    <svg class="w-4 h-4 mr-1.5 text-blue-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 2a8 8 0 100 16 8 8 0 000-16zM9 9V5h2v4h4v2h-4v4H9v-4H5V9h4z"/></svg>
+                    <svg class="w-4 h-4 mr-1.5 text-blue-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 2a8 8 0 100 16 8 8 0 000-16zM9 9V5h2v4h4v2h-4v4H9v-4H5V9h4z"/></svg>
                     SEBI RA: INH000012768 | BSE Enlistment (RAASB): 5826 | Official UPI: harish.ra@validhdfc
                 </span>
             </div>
             <div class="flex items-center space-x-3">
                 <span id="accessibility-label" class="font-semibold text-slate-300">Accessibility:</span>
-                <button id="toggle-contrast" aria-describedby="accessibility-label" class="bg-blue-900 hover:bg-blue-800 text-white px-2.5 py-1 rounded text-xs font-medium border border-blue-700 transition">
+                <button id="toggle-contrast" aria-describedby="accessibility-label" class="bg-blue-900 hover:bg-blue-800 text-white px-2.5 py-1 rounded text-xs font-medium border border-blue-700 transition cursor-pointer">
                     Toggle High Contrast
                 </button>
-                <button id="increase-font" aria-describedby="accessibility-label" class="bg-blue-900 hover:bg-blue-800 text-white px-2.5 py-1 rounded text-xs font-medium border border-blue-700 transition" aria-label="Increase text size">
+                <button id="increase-font" aria-describedby="accessibility-label" class="bg-blue-900 hover:bg-blue-800 text-white px-2.5 py-1 rounded text-xs font-medium border border-blue-700 transition cursor-pointer" aria-label="Increase text size">
                     A+
                 </button>
-                <button id="decrease-font" aria-describedby="accessibility-label" class="bg-blue-900 hover:bg-blue-800 text-white px-2.5 py-1 rounded text-xs font-medium border border-blue-700 transition" aria-label="Decrease text size">
+                <button id="decrease-font" aria-describedby="accessibility-label" class="bg-blue-900 hover:bg-blue-800 text-white px-2.5 py-1 rounded text-xs font-medium border border-blue-700 transition cursor-pointer" aria-label="Decrease text size">
                     A-
                 </button>
             </div>
         </div>
     </aside>
 
+    <!-- Header & Navigation -->
     <header class="sticky top-0 z-50 bg-brandBlack/95 backdrop-blur-md border-b border-slate-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
             <div class="flex items-center space-x-3">
-                <!-- Custom Uploaded Logo representation with exact branding and IAAP compliance -->
                 <a href="#" class="flex items-center space-x-3 group" aria-label="S Harish Chandan Home">
                     <div class="flex items-center space-x-2.5">
                         <svg class="w-10 h-10 text-blue-600 flex-shrink-0" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="S Harish Chandan Logo">
@@ -120,14 +124,13 @@
                 <a href="#services" class="px-3 py-2 rounded-md text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800 transition">Services</a>
                 <a href="#charter" class="px-3 py-2 rounded-md text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800 transition">Investor Charter</a>
                 <a href="#grievance" class="px-3 py-2 rounded-md text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800 transition">Grievance Matrix</a>
-                <a href="#policies" class="px-3 py-2 rounded-md text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800 transition">Compliance Hub</a>
                 <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white font-bold px-4 py-2 rounded-md text-sm transition shadow-md">
                     Client Portal
                 </a>
             </nav>
 
             <!-- Mobile Menu Button -->
-            <button id="mobile-menu-button" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle navigation menu" class="lg:hidden p-2 rounded-md text-slate-300 hover:text-white hover:bg-slate-850 focus:outline-none">
+            <button id="mobile-menu-button" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle navigation menu" class="lg:hidden p-2 rounded-md text-slate-300 hover:text-white hover:bg-slate-800 focus:outline-none cursor-pointer">
                 <svg id="menu-icon" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
                 </svg>
@@ -140,12 +143,13 @@
             <a href="#services" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-200 hover:bg-slate-800">Services</a>
             <a href="#charter" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-200 hover:bg-slate-800">Investor Charter</a>
             <a href="#grievance" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-200 hover:bg-slate-800">Grievance Matrix</a>
-            <a href="#policies" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-200 hover:bg-slate-800">Compliance Hub</a>
             <a href="#contact" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium bg-blue-600 text-white font-bold text-center">Client Portal</a>
         </div>
     </header>
 
     <main id="main-content" class="flex-grow">
+        
+        <!-- Hero Section -->
         <section class="relative overflow-hidden pt-12 pb-20 lg:pt-20 lg:pb-28 bg-gradient-to-b from-brandBlack via-brandCard to-brandBlack">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
@@ -161,7 +165,6 @@
                             Delivering institutional-grade, non-discretionary index, options, equity research, and macroeconomic bulletins built on over 18 years of market expertise.
                         </p>
                         
-                        <!-- Prominent credentials block requested -->
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
                             <div class="bg-brandBlack/80 border border-slate-800 rounded-xl p-4 shadow-sm">
                                 <p class="text-xs text-blue-400 font-semibold uppercase tracking-wider">Official Fee UPI ID</p>
@@ -193,7 +196,7 @@
                                 Verified SEBI RA
                             </div>
                             <div class="flex items-center space-x-4 mb-6">
-                                <div class="w-16 h-16 rounded-full bg-blue-900 border-2 border-blue-500 flex items-center justify-center text-2xl font-bold text-white">
+                                <div class="w-16 h-16 rounded-full bg-blue-900 border-2 border-blue-500 flex items-center justify-center text-2xl font-bold text-white flex-shrink-0">
                                     SH
                                 </div>
                                 <div>
@@ -209,12 +212,16 @@
                                     <span class="font-medium text-slate-200 text-right">RR Nagar, Bengaluru - 560098</span>
                                 </div>
                                 <div class="flex justify-between items-center text-sm">
+                                    <span class="text-slate-400">Compliance Officer:</span>
+                                    <span class="font-medium text-slate-200">S Harish Chandan</span>
+                                </div>
+                                <div class="flex justify-between items-center text-sm">
                                     <span class="text-slate-400">Compliance Email:</span>
                                     <a href="mailto:support@raharishchandan.com" class="font-medium text-blue-400 hover:underline">support@raharishchandan.com</a>
                                 </div>
                                 <div class="flex justify-between items-center text-sm">
                                     <span class="text-slate-400">Helpline:</span>
-                                    <span class="font-medium text-slate-200">+91 88944 66882 / 96868 77511</span>
+                                    <span class="font-medium text-slate-200">+91 88944 66882</span>
                                 </div>
                                 <div class="flex justify-between items-center text-sm">
                                     <span class="text-slate-400">Official UPI Handle:</span>
@@ -232,6 +239,7 @@
             </div>
         </section>
 
+        <!-- Services Section -->
         <section id="services" class="py-20 bg-slate-900/40 border-t border-slate-800">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center max-w-3xl mx-auto mb-16">
@@ -295,13 +303,14 @@
                 </div>
 
                 <!-- Mandatory SEBI F&O Risk Disclosure Banner -->
-                <div class="mt-12 bg-slate-900 border border-blue-500/40 rounded-2xl p-6 text-slate-300 text-xs sm:text-sm leading-relaxed">
+                <div class="mt-12 bg-slate-900 border border-blue-500/40 rounded-2xl p-6 text-slate-300 text-xs sm:text-sm leading-relaxed" role="region" aria-label="Statutory F&O Risk Warning">
                     <strong class="text-blue-400 block font-bold mb-1 uppercase tracking-wider text-xs">Statutory Warning (SEBI F&O Data Mandate):</strong>
                     <em>"1. 9 out of 10 individual traders in equity Futures and Options Segment incurred net trading losses; 2. Cumulatively, net losses incurred by non-institutional categories exceeded ₹50,000 crores; 3. Over smart of the total trading population, majority of trading members incurred net losses; 4. Those trading in futures and options are prone to severe capital erosion. Exercise extreme caution."</em>
                 </div>
             </div>
         </section>
 
+        <!-- Investor Charter Section -->
         <section id="charter" class="py-20 bg-brandBlack border-t border-slate-800">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center max-w-3xl mx-auto mb-16">
@@ -413,6 +422,7 @@
             </div>
         </section>
 
+        <!-- Grievance Redressal Section -->
         <section id="grievance" class="py-20 bg-slate-900/40 border-t border-slate-800">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center max-w-3xl mx-auto mb-16">
@@ -431,7 +441,7 @@
                         <h3 class="text-xl font-bold text-white mb-2">Compliance Officer</h3>
                         <p class="text-sm font-semibold text-blue-400 mb-4">S Harish Chandan</p>
                         <div class="space-y-2 text-sm text-slate-300 border-t border-slate-800 pt-4">
-                            <p><strong>Phone:</strong> +91 88944 66882 / +91 96868 77511</p>
+                            <p><strong>Phone:</strong> +91 88944 66882</p>
                             <p><strong>Email:</strong> <a href="mailto:support@raharishchandan.com" class="text-blue-400 hover:underline">support@raharishchandan.com</a></p>
                             <p class="text-xs text-slate-400 mt-2">Response Time: Within 24-48 working hours.</p>
                         </div>
@@ -458,44 +468,37 @@
                         <p class="text-sm font-semibold text-blue-400 mb-4">Online Dispute Resolution</p>
                         <div class="space-y-2 text-sm text-slate-300 border-t border-slate-800 pt-4">
                             <p><strong>Portal:</strong> <a href="https://smartodr.in" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:underline">smartodr.in</a></p>
-                            <p><strong>Scope:</strong> Conciliation and Arbitration for securities market disputes.</p>
-                            <p class="text-xs text-slate-400 mt-2">Independent institutional dispute resolution.</p>
+                            <p class="text-xs text-slate-400 mt-2">Initiate conciliation and arbitration proceedings.</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="bg-brandCard border border-slate-800 rounded-2xl p-6 sm:p-8 shadow-xl">
-                    <h3 class="text-xl font-bold text-white mb-2">Investor Complaints Data (SEBI Monthly Mandate)</h3>
-                    <p class="text-sm text-slate-300 mb-6">Data in compliance with SEBI circular SEBI/HO/IMD/IMD-POD-1/P/CIR/2023/0000000046.</p>
-                    
+                <!-- Mandatory Complaints Data Table -->
+                <div class="bg-brandCard border border-slate-800 rounded-2xl p-6 sm:p-8">
+                    <h3 class="text-xl font-bold text-white mb-4">Investor Complaints Data (Mandatory Disclosure)</h3>
+                    <p class="text-xs text-slate-400 mb-4">Data pertaining to investor complaints uploaded on a monthly basis in accordance with SEBI circulars.</p>
                     <div class="overflow-x-auto">
-                        <table class="w-full text-left border-collapse text-sm text-slate-300" aria-label="Monthly Complaints Data Table">
+                        <table class="w-full text-left border-collapse text-sm">
                             <thead>
-                                <tr class="bg-slate-900 text-blue-400 uppercase text-xs tracking-wider border-b border-slate-800">
-                                    <th scope="col" class="p-4">Month</th>
-                                    <th scope="col" class="p-4">Carried Forward</th>
-                                    <th scope="col" class="p-4">Received</th>
-                                    <th scope="col" class="p-4">Resolved</th>
-                                    <th scope="col" class="p-4">Pending</th>
-                                    <th scope="col" class="p-4">Avg Resolution Time</th>
+                                <tr class="bg-slate-900 text-slate-200 border-b border-slate-800">
+                                    <th class="p-3">Sr. No.</th>
+                                    <th class="p-3">Pending at end of last month</th>
+                                    <th class="p-3">Received during the month</th>
+                                    <th class="p-3">Resolved during the month</th>
+                                    <th class="p-3">Total Pending complaints</th>
+                                    <th class="p-3">Pending complaints > 3 months</th>
+                                    <th class="p-3">Average Resolution Time (days)</th>
                                 </tr>
                             </thead>
-                            <tbody class="divide-y divide-slate-800">
-                                <tr class="hover:bg-slate-800/50">
-                                    <td class="p-4 font-semibold text-white">August 2026</td>
-                                    <td class="p-4">0</td>
-                                    <td class="p-4">0</td>
-                                    <td class="p-4">0</td>
-                                    <td class="p-4 font-bold text-emerald-400">0</td>
-                                    <td class="p-4">N.A.</td>
-                                </tr>
-                                <tr class="hover:bg-slate-800/50">
-                                    <td class="p-4 font-semibold text-white">September 2026</td>
-                                    <td class="p-4">0</td>
-                                    <td class="p-4">0</td>
-                                    <td class="p-4">0</td>
-                                    <td class="p-4 font-bold text-emerald-400">0</td>
-                                    <td class="p-4">N.A.</td>
+                            <tbody class="text-slate-300 divide-y divide-slate-800">
+                                <tr>
+                                    <td class="p-3 font-semibold">1</td>
+                                    <td class="p-3">0</td>
+                                    <td class="p-3">0</td>
+                                    <td class="p-3">0</td>
+                                    <td class="p-3">0</td>
+                                    <td class="p-3">0</td>
+                                    <td class="p-3">0</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -504,391 +507,102 @@
             </div>
         </section>
 
-        <section id="policies" class="py-20 bg-brandBlack border-t border-slate-800">
+        <!-- Contact & Client Portal Section -->
+        <section id="contact" class="py-20 bg-brandBlack border-t border-slate-800">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center max-w-3xl mx-auto mb-16">
-                    <span class="text-blue-400 font-semibold text-xs tracking-widest uppercase">Regulatory Framework</span>
-                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mt-2">Compliance Hub & Policies</h2>
-                    <p class="mt-4 text-lg text-slate-300">
-                        Explore our statutory compliance policies, code of conduct, AML guidelines, and fee refund terms.
-                    </p>
-                </div>
-
-                <div class="flex flex-wrap justify-center gap-2 mb-8" role="tablist" aria-label="Compliance Policies">
-                    <button role="tab" id="tab-1" aria-selected="true" aria-controls="panel-1" class="px-5 py-3 rounded-xl font-semibold text-sm transition bg-blue-600 text-white shadow">
-                        Code of Conduct
-                    </button>
-                    <button role="tab" id="tab-2" aria-selected="false" aria-controls="panel-2" tabindex="-1" class="px-5 py-3 rounded-xl font-semibold text-sm transition bg-brandCard text-slate-300 hover:text-white border border-slate-800">
-                        AML & PMLA 2002 Policy
-                    </button>
-                    <button role="tab" id="tab-3" aria-selected="false" aria-controls="panel-3" tabindex="-1" class="px-5 py-3 rounded-xl font-semibold text-sm transition bg-brandCard text-slate-300 hover:text-white border border-slate-800">
-                        Fee & Refund Policy
-                    </button>
-                    <button role="tab" id="tab-4" aria-selected="false" aria-controls="panel-4" tabindex="-1" class="px-5 py-3 rounded-xl font-semibold text-sm transition bg-brandCard text-slate-300 hover:text-white border border-slate-800">
-                        Periodic Declarations
-                    </button>
-                </div>
-
-                <div class="bg-brandCard border border-slate-800 rounded-2xl p-6 sm:p-10 shadow-xl">
-                    <div id="panel-1" role="tabpanel" aria-labelledby="tab-1" class="space-y-6">
-                        <h3 class="text-2xl font-bold text-white flex items-center">
-                            <span class="w-3 h-3 rounded-full bg-blue-500 mr-3"></span>
-                            Code of Conduct & Securities Dealing Procedures
-                        </h3>
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-slate-300 text-sm leading-relaxed">
-                            <div class="bg-slate-900/60 p-5 rounded-xl border border-slate-800">
-                                <h4 class="font-bold text-white mb-2 text-base">Trading Blackout Periods</h4>
-                                <p>
-                                    As a SEBI Registered Research Analyst, S Harish Chandan strictly enforces a mandatory <strong>30-day pre-recommendation trading blackout</strong> and a <strong>5-day post-recommendation trading blackout</strong> in any security or derivative contract covered in research reports.
-                                </p>
-                            </div>
-                            <div class="bg-slate-900/60 p-5 rounded-xl border border-slate-800">
-                                <h4 class="font-bold text-white mb-2 text-base">Prohibition of Front-Running</h4>
-                                <p>
-                                    Zero tolerance for front-running or personal trading ahead of issuing research reports. All personal transactions are subject to internal audit and regulatory scrutiny.
-                                </p>
-                            </div>
-                            <div class="bg-slate-900/60 p-5 rounded-xl border border-slate-800">
-                                <h4 class="font-bold text-white mb-2 text-base">Arm's Length Separation</h4>
-                                <p>
-                                    Complete separation from execution services, proprietary trading desks, or investment banking divisions to ensure objective, conflict-free research recommendations.
-                                </p>
-                            </div>
-                            <div class="bg-slate-900/60 p-5 rounded-xl border border-slate-800">
-                                <h4 class="font-bold text-white mb-2 text-base">Conflict Disclosure</h4>
-                                <p>
-                                    Any financial interest, holding, or material conflict of interest regarding subject companies is explicitly disclosed within each published research report.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div id="panel-2" role="tabpanel" aria-labelledby="tab-2" class="space-y-6 hidden">
-                        <h3 class="text-2xl font-bold text-white flex items-center">
-                            <span class="w-3 h-3 rounded-full bg-blue-500 mr-3"></span>
-                            Anti-Money Laundering (AML) & PMLA 2002 Policy
-                        </h3>
-                        <div class="space-y-4 text-slate-300 text-sm leading-relaxed">
-                            <p>
-                                In accordance with the Prevention of Money Laundering Act (PMLA), 2002 and SEBI guidelines, S Harish Chandan maintains strict Client Due Diligence (CDD) procedures for all subscribers.
-                            </p>
-                            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2">
-                                <div class="bg-slate-900/60 p-4 rounded-xl border border-slate-800">
-                                    <strong class="text-white block mb-1">Client Identification</strong>
-                                    Mandatory Aadhaar/address proof and verified bank account mapping prior to activating research service subscriptions.
-                                </div>
-                                <div class="bg-slate-900/60 p-4 rounded-xl border border-slate-800">
-                                    <strong class="text-white block mb-1">Record Retention (10 Years)</strong>
-                                    All financial transaction records, KYC documents, and research correspondence are securely archived for a minimum period of 10 years.
-                                </div>
-                                <div class="bg-slate-900/60 p-4 rounded-xl border border-slate-800">
-                                    <strong class="text-white block mb-1">Independent Annual Audit</strong>
-                                    Internal systems and AML compliance protocols undergo independent annual audits as mandated by SEBI.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div id="panel-3" role="tabpanel" aria-labelledby="tab-3" class="space-y-6 hidden">
-                        <h3 class="text-2xl font-bold text-white flex items-center">
-                            <span class="w-3 h-3 rounded-full bg-blue-500 mr-3"></span>
-                            Fee Payment & Refund Policy
-                        </h3>
-                        <div class="space-y-4 text-slate-300 text-sm leading-relaxed">
-                            <div class="bg-blue-600/10 border border-blue-500/30 p-5 rounded-xl">
-                                <h4 class="font-bold text-blue-400 mb-2 text-base">Official Banking Channels Only</h4>
-                                <p class="text-slate-200">
-                                    All research subscription fees must be paid exclusively via official banking channels. Our official UPI ID is <code class="bg-slate-900 px-2 py-1 rounded text-blue-300 font-mono">harish.ra@validhdfc</code> (HDFC Bank). <strong class="text-rose-400">Cash payments are strictly prohibited.</strong>
-                                </p>
-                            </div>
-                            <div class="bg-slate-900/60 p-5 rounded-xl border border-slate-800">
-                                <h4 class="font-bold text-white mb-2 text-base">Strict No-Refund Policy</h4>
-                                <p>
-                                    Due to the digital, intellectual, and downloadable nature of research reports and analytical bulletins, <strong class="text-white">all fees paid are strictly non-refundable</strong> once research reports have been dispatched or accessed. Clients are advised to review service scopes before subscribing.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div id="panel-4" role="tabpanel" aria-labelledby="tab-4" class="space-y-6 hidden">
-                        <h3 class="text-2xl font-bold text-white flex items-center">
-                            <span class="w-3 h-3 rounded-full bg-blue-500 mr-3"></span>
-                            Periodic Declarations & SaaS Compliance
-                        </h3>
-                        <div class="space-y-4 text-slate-300 text-sm leading-relaxed">
-                            <p>
-                                S Harish Chandan hereby confirms standalone compliance with SEBI (Research Analysts) Regulations, 2014 and circulars issued thereunder.
-                            </p>
-                            <ul class="space-y-2 list-disc list-inside text-slate-300">
-                                <li class="text-sm">No disciplinary action has been taken by SEBI or any other regulatory authority against the analyst.</li>
-                                <li class="text-sm">No association with any brokerage house or corporate finance entity that compromises research objectivity.</li>
-                                <li class="text-sm">Regular filing of compliance certificates, investor grievance reports, and periodic disclosures with SEBI / BSE.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact" class="py-20 bg-slate-900/40 border-t border-slate-800">
-            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-16">
                     <span class="text-blue-400 font-semibold text-xs tracking-widest uppercase">Get in Touch</span>
-                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mt-2">Client Consultation Portal</h2>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mt-2">Client Portal & Office Contact</h2>
                     <p class="mt-4 text-lg text-slate-300">
-                        Reach out for inquiries regarding our research offerings, subscription details, or compliance queries.
+                        Connect with our compliance and research desk for official subscriptions and queries.
                     </p>
                 </div>
 
-                <div class="bg-brandCard border border-slate-800 rounded-2xl p-6 sm:p-10 shadow-2xl">
-                    <form id="consultation-form" class="space-y-6" novalidate>
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                            <div>
-                                <label for="fullName" class="block text-sm font-medium text-slate-200 mb-2">Full Name <span class="text-blue-400" aria-hidden="true">*</span></label>
-                                <input type="text" id="fullName" name="fullName" required aria-required="true" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter your full name">
-                                <span id="error-fullName" class="text-rose-400 text-xs mt-1 hidden" role="alert">Please enter your full name.</span>
-                            </div>
-                            <div>
-                                <label for="email" class="block text-sm font-medium text-slate-200 mb-2">Email Address <span class="text-blue-400" aria-hidden="true">*</span></label>
-                                <input type="email" id="email" name="email" required aria-required="true" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="name@example.com">
-                                <span id="error-email" class="text-rose-400 text-xs mt-1 hidden" role="alert">Please enter a valid email address.</span>
-                            </div>
-                        </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-brandCard border border-slate-800 rounded-2xl p-6">
+                        <h3 class="text-lg font-bold text-white mb-3">Registered Address</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed">
+                            Rajarajeshwari Nagar, Bengaluru, Karnataka, 560098, India
+                        </p>
+                    </div>
 
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                            <div>
-                                <label for="phone" class="block text-sm font-medium text-slate-200 mb-2">Mobile Number <span class="text-blue-400" aria-hidden="true">*</span></label>
-                                <input type="tel" id="phone" name="phone" required aria-required="true" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="+91 98765 43210">
-                                <span id="error-phone" class="text-rose-400 text-xs mt-1 hidden" role="alert">Please enter a valid phone number.</span>
-                            </div>
-                            <div>
-                                <label for="service" class="block text-sm font-medium text-slate-200 mb-2">Research Offering Interest</label>
-                                <select id="service" name="service" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
-                                    <option value="index-options">Index & Options Research</option>
-                                    <option value="equity-portfolio">Equity & Portfolio Research</option>
-                                    <option value="macro">Macro & Advisory Bulletins</option>
-                                    <option value="general">General Compliance Inquiry</option>
-                                </select>
-                            </div>
-                        </div>
+                    <div class="bg-brandCard border border-slate-800 rounded-2xl p-6">
+                        <h3 class="text-lg font-bold text-white mb-3">Communication Desk</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed">
+                            <strong>Phone:</strong> +91 88944 66882<br>
+                            <strong>Email:</strong> support@raharishchandan.com
+                        </p>
+                    </div>
 
-                        <div>
-                            <label for="message" class="block text-sm font-medium text-slate-200 mb-2">Message / Specific Inquiry <span class="text-blue-400" aria-hidden="true">*</span></label>
-                            <textarea id="message" name="message" rows="4" required aria-required="true" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Type your message here..."></textarea>
-                            <span id="error-message" class="text-rose-400 text-xs mt-1 hidden" role="alert">Please enter your message.</span>
-                        </div>
-
-                        <div class="flex items-start">
-                            <input type="checkbox" id="consent" name="consent" required aria-required="true" class="mt-1 h-4 w-4 rounded border-slate-700 bg-slate-900 text-blue-600 focus:ring-blue-500">
-                            <label for="consent" class="ml-2.5 text-xs text-slate-300">
-                                I confirm that I am seeking non-discretionary research advisory services and acknowledge that investments in securities and F&O trading involve substantial financial risk. <span class="text-blue-400">*</span>
-                            </label>
-                        </div>
-                        <span id="error-consent" class="text-rose-400 text-xs mt-1 hidden" role="alert">You must agree to the terms to proceed.</span>
-
-                        <div id="form-success-message" class="hidden bg-emerald-500/10 border border-emerald-500/30 p-4 rounded-xl text-emerald-400 text-sm font-medium" role="status" aria-live="polite">
-                            Thank you! Your inquiry has been submitted securely to our compliance desk. We will respond within 24 working hours.
-                        </div>
-
-                        <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 rounded-xl text-base transition shadow-lg">
-                            Submit Secure Inquiry
-                        </button>
-                    </form>
+                    <div class="bg-brandCard border border-slate-800 rounded-2xl p-6">
+                        <h3 class="text-lg font-bold text-white mb-3">Compliance Officer</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed">
+                            <strong>Name:</strong> S Harish Chandan<br>
+                            <strong>Designation:</strong> Compliance Officer & Principal Analyst
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
+
     </main>
 
-    <footer class="bg-brandBlack border-t border-slate-800 text-slate-400 text-xs py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <div class="space-y-3 md:col-span-2">
-                    <div class="flex items-center space-x-3">
-                        <svg class="w-8 h-8 text-blue-600 flex-shrink-0" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="S Harish Chandan Logo Footer">
-                            <title>S Harish Chandan Logo Footer</title>
-                            <rect width="40" height="40" rx="8" fill="#1e3a8a"/>
-                            <path d="M12 28V12h6c2.5 0 4 1.2 4 3s-1.5 3-4 3h-2v4h-2zm2-8h4c1.2 0 2-.5 2-1.5s-.8-1.5-2-1.5h-4v3z" fill="#ffffff"/>
-                            <path d="M24 28l-4-16h3l2.5 10L28 12h3l-4 16h-3z" fill="#ffffff"/>
-                        </svg>
-                        <span class="text-white font-bold text-base">S Harish Chandan</span>
-                    </div>
-                    <p class="text-slate-300 leading-relaxed">
-                        SEBI Registered Research Analyst | Registration No: <strong class="text-blue-400">INH000012768</strong> | BSE Enlistment (RAASB): <strong class="text-blue-400">5826</strong> | Official UPI: <strong class="text-blue-400 font-mono">harish.ra@validhdfc</strong>
-                    </p>
-                    <p class="text-slate-400">
-                        Office: Rajarajeshwari Nagar, Bengaluru, Karnataka - 560098.
-                    </p>
-                </div>
-                <div>
-                    <h3 class="text-white font-semibold text-sm mb-3 uppercase tracking-wider">Quick Links</h3>
-                    <ul class="space-y-2">
-                        <li><a href="#about" class="hover:text-blue-400 transition">About Analyst</a></li>
-                        <li><a href="#services" class="hover:text-blue-400 transition">Research Services</a></li>
-                        <li><a href="#charter" class="hover:text-blue-400 transition">Investor Charter</a></li>
-                        <li><a href="#grievance" class="hover:text-blue-400 transition">Grievance Redressal</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="text-white font-semibold text-sm mb-3 uppercase tracking-wider">Regulatory Portals</h3>
-                    <ul class="space-y-2">
-                        <li><a href="https://scores.sebi.gov.in" target="_blank" rel="noopener noreferrer" class="hover:text-blue-400 transition">SEBI SCORES</a></li>
-                        <li><a href="https://smartodr.in" target="_blank" rel="noopener noreferrer" class="hover:text-blue-400 transition">SMART ODR Portal</a></li>
-                        <li><a href="https://www.sebi.gov.in" target="_blank" rel="noopener noreferrer" class="hover:text-blue-400 transition">SEBI Official Website</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="border-t border-slate-800 pt-8 text-[11px] leading-relaxed text-slate-400 space-y-3">
-                <p>
-                    <strong class="text-blue-400">Statutory Disclaimer:</strong> S Harish Chandan is a SEBI Registered Research Analyst (Registration No: INH000012768, BSE Enlistment RAASB: 5826). Registration granted by SEBI, enlistment with BSE, and certification from NISM in no way guarantee performance of the intermediary or provide any assurance of returns to investors. Investments in securities are subject to market risks. Read all related documents carefully before investing.
-                </p>
-                <p>
-                    The research reports and bulletins published on this platform are for informational and educational purposes only and do not constitute an offer to buy or sell or a solicitation of an offer to buy or sell any security or financial instrument. Recommendations are strictly non-discretionary. Clients must execute trades independently based on their own risk appetite and financial objectives.
-                </p>
-            </div>
-
-            <div class="border-t border-slate-800 pt-6 flex flex-col sm:flex-row items-center justify-between text-slate-500">
-                <p>&copy; 2026 S Harish Chandan. All rights reserved.</p>
-                <p class="mt-2 sm:mt-0">Fully Accessible IAAP & WCAG 2.2 AAA Compliant Web Interface</p>
+    <!-- Footer -->
+    <footer class="bg-brandBlack border-t border-slate-800 py-12 text-slate-400 text-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4 text-center">
+            <p>&copy; 2026 S Harish Chandan. All rights reserved. SEBI Registered Research Analyst (Registration No: INH000012768 | BSE Enlistment: RAASB: 5826).</p>
+            <p class="text-xs text-slate-500 max-w-4xl mx-auto">
+                Disclaimer: Investment in securities market are subject to market risks. Read all the related documents carefully before investing. Registration granted by SEBI, membership of BASL and certification from NISM in no way guarantee performance of the intermediary or provide any assurance of returns to investors.
+            </p>
+            <div class="pt-4 border-t border-slate-800 text-xs text-slate-500">
+                Designed with strict adherence to IAAP accessibility standards (WCAG 2.2 AAA) and SEBI Research Analyst Regulations.
             </div>
         </div>
     </footer>
 
+    <!-- Interactive JavaScript for Mobile Menu & Accessibility Controls -->
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const mobileMenuBtn = document.getElementById('mobile-menu-button');
-            const mobileMenu = document.getElementById('mobile-menu');
-            const menuIcon = document.getElementById('menu-icon');
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
 
-            mobileMenuBtn.addEventListener('click', function() {
-                const isExpanded = mobileMenuBtn.getAttribute('aria-expanded') === 'true';
-                mobileMenuBtn.setAttribute('aria-expanded', !isExpanded);
-                mobileMenu.classList.toggle('hidden');
-                
-                if (!isExpanded) {
-                    menuIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>';
-                } else {
-                    menuIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>';
-                }
+        mobileMenuButton.addEventListener('click', () => {
+            const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+            mobileMenuButton.setAttribute('aria-expanded', !expanded);
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.mobile-nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                mobileMenuButton.setAttribute('aria-expanded', 'false');
             });
+        });
 
-            document.querySelectorAll('.mobile-nav-link').forEach(link => {
-                link.addEventListener('click', () => {
-                    mobileMenu.classList.add('hidden');
-                    mobileMenuBtn.setAttribute('aria-expanded', 'false');
-                    menuIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>';
-                });
-            });
+        // High Contrast Mode Toggle
+        const toggleContrastBtn = document.getElementById('toggle-contrast');
+        toggleContrastBtn.addEventListener('click', () => {
+            document.body.classList.toggle('high-contrast-mode');
+        });
 
-            const tabs = document.querySelectorAll('[role="tab"]');
-            const panels = document.querySelectorAll('[role="tabpanel"]');
+        // Font Size Adjustments (A+ / A-)
+        const increaseFontBtn = document.getElementById('increase-font');
+        const decreaseFontBtn = document.getElementById('decrease-font');
+        let currentFontSize = 16; // Base font size in px
 
-            tabs.forEach(tab => {
-                tab.addEventListener('click', () => {
-                    tabs.forEach(t => {
-                        t.setAttribute('aria-selected', 'false');
-                        t.setAttribute('tabindex', '-1');
-                        t.classList.remove('bg-blue-600', 'text-white', 'shadow');
-                        t.classList.add('bg-brandCard', 'text-slate-300', 'border', 'border-slate-800');
-                    });
+        increaseFontBtn.addEventListener('click', () => {
+            if (currentFontSize < 22) {
+                currentFontSize += 2;
+                document.documentElement.style.fontSize = currentFontSize + 'px';
+            }
+        });
 
-                    panels.forEach(p => p.classList.add('hidden'));
-
-                    tab.setAttribute('aria-selected', 'true');
-                    tab.setAttribute('tabindex', '0');
-                    tab.classList.remove('bg-brandCard', 'text-slate-300', 'border', 'border-slate-800');
-                    tab.classList.add('bg-blue-600', 'text-white', 'shadow');
-
-                    const targetPanelId = tab.getAttribute('aria-controls');
-                    document.getElementById(targetPanelId).classList.remove('hidden');
-                });
-            });
-
-            const bodyEl = document.body;
-            let currentFontSize = 100;
-
-            document.getElementById('toggle-contrast').addEventListener('click', () => {
-                bodyEl.classList.toggle('high-contrast-mode');
-            });
-
-            document.getElementById('increase-font').addEventListener('click', () => {
-                if (currentFontSize < 130) {
-                    currentFontSize += 10;
-                    document.documentElement.style.fontSize = currentFontSize + '%';
-                }
-            });
-
-            document.getElementById('decrease-font').addEventListener('click', () => {
-                if (currentFontSize > 90) {
-                    currentFontSize -= 10;
-                    document.documentElement.style.fontSize = currentFontSize + '%';
-                }
-            });
-
-            const form = document.getElementById('consultation-form');
-            form.addEventListener('submit', function(e) {
-                e.preventDefault();
-                let isValid = true;
-
-                const fullName = document.getElementById('fullName');
-                const email = document.getElementById('email');
-                const phone = document.getElementById('phone');
-                const message = document.getElementById('message');
-                const consent = document.getElementById('consent');
-                const successMsg = document.getElementById('form-success-message');
-
-                if (!fullName.value.trim()) {
-                    document.getElementById('error-fullName').classList.remove('hidden');
-                    fullName.setAttribute('aria-invalid', 'true');
-                    isValid = false;
-                } else {
-                    document.getElementById('error-fullName').classList.add('hidden');
-                    fullName.removeAttribute('aria-invalid');
-                }
-
-                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                if (!emailRegex.test(email.value.trim())) {
-                    document.getElementById('error-email').classList.remove('hidden');
-                    email.setAttribute('aria-invalid', 'true');
-                    isValid = false;
-                } else {
-                    document.getElementById('error-email').classList.add('hidden');
-                    email.removeAttribute('aria-invalid');
-                }
-
-                if (!phone.value.trim() || phone.value.length < 10) {
-                    document.getElementById('error-phone').classList.remove('hidden');
-                    phone.setAttribute('aria-invalid', 'true');
-                    isValid = false;
-                } else {
-                    document.getElementById('error-phone').classList.add('hidden');
-                    phone.removeAttribute('aria-invalid');
-                }
-
-                if (!message.value.trim()) {
-                    document.getElementById('error-message').classList.remove('hidden');
-                    message.setAttribute('aria-invalid', 'true');
-                    isValid = false;
-                } else {
-                    document.getElementById('error-message').classList.add('hidden');
-                    message.removeAttribute('aria-invalid');
-                }
-
-                if (!consent.checked) {
-                    document.getElementById('error-consent').classList.remove('hidden');
-                    consent.setAttribute('aria-invalid', 'true');
-                    isValid = false;
-                } else {
-                    document.getElementById('error-consent').classList.add('hidden');
-                    consent.removeAttribute('aria-invalid');
-                }
-
-                if (isValid) {
-                    successMsg.classList.remove('hidden');
-                    form.reset();
-                    successMsg.scrollIntoView({ behavior: 'smooth' });
-                }
-            });
+        decreaseFontBtn.addEventListener('click', () => {
+            if (currentFontSize > 12) {
+                currentFontSize -= 2;
+                document.documentElement.style.fontSize = currentFontSize + 'px';
+            }
         });
     </script>
 </body>
